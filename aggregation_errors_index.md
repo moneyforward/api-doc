@@ -1,6 +1,6 @@
 # GET /api/v1/aggregation_errors
 
-金融機関のカテゴリマスターを返します。
+アグリゲーションのエラーマスタを返します。
 
 ## Resrouce URL
 https://moneyforward.com/api/v1/aggregation_errors
