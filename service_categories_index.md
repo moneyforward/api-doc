@@ -1,6 +1,6 @@
 # GET /api/v1/service_categories
 
-アグリゲーションのエラーマスタを返します。
+金融機関のカテゴリマスターを返します。
 
 ## Resrouce URL
 https://moneyforward.com/api/v1/service_categories
