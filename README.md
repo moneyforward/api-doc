@@ -29,7 +29,7 @@ oAuth2
 ## APIリファレンス
 
 以下参照ください  
-[APIリファレンス](moneyforward-api.md)
+[APIリファレンス](api-referrence.md)
 
 ## 注意点
 
