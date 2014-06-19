@@ -1,17 +1,25 @@
-# GET /api/v1/user_asset_summaries
-ユーザーの保有する個別資産合計リストを返します。
-user_asset_summaryは(個別資産をサブアカウント、アセットサブクラス、通過毎に集計したものです）
+# GET /api/v1/user_assets
+ユーザーの保有する資産のリストを返す
 
 ## Resrouce URL
-https://moneyforward.com/api/v1/user_asset_summaries
+https://moneyforward.com/api/v1/user_assets
 
 ## Data definition
 
 name | Description 
 -----------|------------------------
+code | 株式銘柄コード等。
+cost | 現在未使用フィールド
+entried_at | 資産取得日（特定できなければnull）
+entried_price | 取得価格
+jpy_rate | 円換算レート
+name | 資産名称
 profit | 損益
+qty | 数量 (FXの場合、正の数がロング、負の数がショートポジション)
 value | 評価額
-rated_value | 為替レートを勘案した円換算評価額
+created_at | レコード作成日
+updated_at | レコード更新日
+
 
 ## Parameters
 name | Description 
@@ -25,25 +33,31 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
  
 ## Example
 ***
-> **GET** *https://moneyforward.com/api/v1/user_asset_summaries?account_ids[]=LlPqfqeeCZavwPBLmUy6xg==&asset_subclass_ids[]=39*
+> **GET** *https://moneyforward.com/api/v1/user_assets?account_ids[]=LlPqfqeeCZavwPBLmUy6xg==&asset_class_ids[]=3*
 
     {
       "limit": 100,
       "offset": 0,
       "total_count": 1,
-      "user_asset_summaries": [
+      "user_assets": [
         {
-          "user_asset_summary": {
-            "asset_class_id": 9,
-            "asset_subclass_id": 39,
+          "user_asset": {
+            "asset_class_id": 3,
+            "asset_subclass_id": 12,
+            "code": "",
+            "cost": 0,
             "created_at": "2014-05-22T06:33:13+09:00",
             "currency": "JPY",
+            "current_price": 389024.721519843,
+            "entried_at": null,
+            "entried_price": 300000,
             "jpyrate": 1,
-            "profit": 3000,
-            "rated_value": 775155.8708305522,
+            "name": "【デモ】マネフォファンド",
+            "profit": 89024.72151984298,
+            "qty": 1,
             "updated_at": "2014-05-22T06:33:13+09:00",
-            "value": 775155.8708305522,
-            "hashed_id": "EZOB3wR14WhMJDWb49ydFg==",
+            "value": 389024.721519843,
+            "hashed_id": "vpxDzM6STgFT4Br7pFTzVQ==",
             "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
             "account": {
               "account_uid_hidden": "dem*",
@@ -73,17 +87,17 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
               }
             },
             "asset_class": {
-              "asset_class_name": "年金",
-              "asset_class_type": "PNS",
-              "disp_order": 10,
-              "id": 9
+              "asset_class_name": "投資信託",
+              "asset_class_type": "MF",
+              "disp_order": 4,
+              "id": 3
             },
             "asset_subclass": {
-              "asset_class_id": 9,
-              "asset_subclass_name": "確定拠出年金",
-              "asset_subclass_type": "KAKUTEI_PNS",
-              "id": 39,
-              "liquid": 70
+              "asset_class_id": 3,
+              "asset_subclass_name": "投資信託",
+              "asset_subclass_type": "MUTUAL_FUND",
+              "id": 12,
+              "liquid": 85
             }
           }
         }
