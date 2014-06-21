@@ -13,6 +13,11 @@ value | 評価額
 rated_profit | 為替レート勘案円換算損益
 rated_value | 為替レート勘案円換算評価額
 updated_at | 基準日
+previous_value_set[:value] | 前日評価額
+previous_value_set[:profit] | 前日損益
+previous_value_set[:rated_value] | 前日円換算評価額
+previous_value_set[:rated_profit] | 前日円換算損益
+previous_value_set[:updated_at] | 前日日付
 
 ## Parameters
 name | Description 
@@ -40,6 +45,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "DEPO",
             "disp_order": 1,
             "id": 1
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -56,6 +68,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "MF",
             "disp_order": 4,
             "id": 3
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -72,6 +91,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "EQ",
             "disp_order": 2,
             "id": 4
+          },
+          "previous_value_set": {
+            "profit": 90000,
+            "rated_profit": 90000,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -88,6 +114,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "FX",
             "disp_order": 6,
             "id": 5
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -104,6 +137,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "DRV",
             "disp_order": 7,
             "id": 6
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -120,6 +160,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "LIA",
             "disp_order": 100,
             "id": 11
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       },
@@ -136,6 +183,13 @@ asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
             "asset_class_type": "MGN",
             "disp_order": 3,
             "id": 13
+          },
+          "previous_value_set": {
+            "profit": 0,
+            "rated_profit": 0,
+            "rated_value": 3329192,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 3329192
           }
         }
       }
