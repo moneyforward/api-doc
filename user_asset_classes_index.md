@@ -13,15 +13,16 @@ value | 評価額
 rated_profit | 為替レート勘案円換算損益
 rated_value | 為替レート勘案円換算評価額
 updated_at | 基準日
-previous_value_set[:value] | 前日評価額
-previous_value_set[:profit] | 前日損益
-previous_value_set[:rated_value] | 前日円換算評価額
-previous_value_set[:rated_profit] | 前日円換算損益
-previous_value_set[:updated_at] | 前日日付
+previous_value_set[:value] | 前営業日評価額
+previous_value_set[:profit] | 前営業日損益
+previous_value_set[:rated_value] | 前営業日円換算評価額
+previous_value_set[:rated_profit] | 前営業日円換算損益
+previous_value_set[:updated_at] | 前営業日日付
 
 ## Parameters
 name | Description 
 -----------|------------------------
+previous_date <br /> *optional* | 前営業日
 account_ids <br /> *optional* | 登録金融機関ID *hashed* *Array*
 asset_class_ids  <br /> *optional* | アセットクラスID *Array*
 asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
