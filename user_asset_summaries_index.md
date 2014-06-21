@@ -11,8 +11,13 @@ name | Description
 -----------|------------------------
 profit | 損益
 value | 評価額
-rated_value | 為替レートを勘案した円換算評価額
-rated_profit | 為替レートを勘案した円換算損益
+rated_value | 円換算評価額
+rated_profit | 円換算損益
+previous_value_set[:value] | 前日評価額
+previous_value_set[:profit] | 前日損益
+previous_value_set[:rated_value] | 前日円換算評価額
+previous_value_set[:rated_profit] | 前日円換算損益
+previous_value_set[:updated_at] | 前日日付
 
 ## Parameters
 name | Description 
@@ -47,6 +52,13 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
             "value": 775155.8708305522,
             "hashed_id": "EZOB3wR14WhMJDWb49ydFg==",
             "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
+            "previous_value_set": {
+              "profit": 32100,
+              "rated_profit": 32100,
+              "rated_value": 1849530,
+              "updated_at": "2014-06-20T00:00:00+09:00",
+              "value": 1849530
+            },
             "account": {
               "account_uid_hidden": "dem*",
               "created_at": "2014-04-19T17:33:37+09:00",
