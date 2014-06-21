@@ -22,7 +22,7 @@ previous_value_set[:updated_at] | 前営業日日付
 ## Parameters
 name | Description 
 -----------|------------------------
-previous_date <br /> *optional* | 前営業日
+previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を採用
 account_ids <br /> *optional* | 登録金融機関ID *hashed* *Array*
 asset_class_ids  <br /> *optional* | アセットクラスID *Array*
 asset_subclass_ids  <br /> *optional* | アセットサブクラスID *Array*
