@@ -17,8 +17,15 @@ name | 資産名称
 profit | 損益
 qty | 数量
 value | 評価額
+rated_value | 円換算評価額
+rated_profit | 円換算損益
 created_at | レコード作成日
 updated_at | レコード更新日
+previous_value_set[:value] | 前日評価額
+previous_value_set[:profit] | 前日損益
+previous_value_set[:rated_value] | 前日円換算評価額
+previous_value_set[:rated_profit] | 前日円換算損益
+previous_value_set[:updated_at] | 前日日付
 
 ## Parameters
 name | Description 
@@ -48,6 +55,13 @@ id <br /> *required* | 個別資産ID *hashed*
         "value": 389024.721519843,
         "hashed_id": "vpxDzM6STgFT4Br7pFTzVQ==",
         "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
+        "previous_value_set": {
+            "profit": 80934.72151984298,
+            "rated_profit": 383024.721519843,
+            "rated_value": 379024.721519843,
+            "updated_at": "2014-06-20T00:00:00+09:00",
+            "value": 379024.721519843
+        },
         "account": {
           "account_uid_hidden": "dem*",
           "created_at": "2014-04-19T17:33:37+09:00",
