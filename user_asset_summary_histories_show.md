@@ -13,6 +13,11 @@ value | 評価額
 rated_value | 為替レートを勘案した円換算評価額
 rated_profit | 為替レートを勘案した円換算損益
 updated_at | 基準日
+previous_value_set[:value] | 前日評価額
+previous_value_set[:profit] | 前日損益
+previous_value_set[:rated_value] | 前日円換算評価額
+previous_value_set[:rated_profit] | 前日円換算損益
+previous_value_set[:updated_at] | 前日日付
 
 ## Parameters
 name | Description 
@@ -36,6 +41,13 @@ id <br /> *required* | 個別資産合計履歴ID *hashed*
         "hashed_id": "jPuCXXZP3h6TBx3DskME-A==",
         "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
         "hashed_original_user_asset_summary_id": "BR5-TCLSc2eZ-gf5Wxa4lA==",
+        "previous_value_set": {
+          "profit": 32100,
+          "rated_profit": 32100,
+          "rated_value": 1849530,
+          "updated_at": "2014-06-20T00:00:00+09:00",
+          "value": 1849530
+        },
         "account": {
           "account_uid_hidden": "dem*",
           "created_at": "2014-04-19T17:33:37+09:00",
