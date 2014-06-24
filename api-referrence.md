@@ -96,7 +96,7 @@
  Resource | Description 
 :-----------|------------------------:
  [GET /api/v1/user_asset_classes](user_asset_classes_index.md) | 資産クラス別合計リストの取得
-
+
 ## user_asset_class_histories
 *資産クラス別の資産合計の履歴*
 
@@ -131,7 +131,7 @@ oAuth2
 レスポンスbodyの例
 
       {
-        "error_code" : 2000,
+        "error_code" : 42200,
         "errors" : [
           "名前の長さは20文字以内にしてください。",
           "日付は現在日付以降にしてください。"
