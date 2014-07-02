@@ -49,6 +49,8 @@
  [POST /api/v1/accounts](accounts_create.md) | 金融機関の登録
  [PUT /api/v1/accounts/:id](accounts_update.md) | 登録機関の更新
  [DELETE /api/v1/accounts/:id](accounts_destroy.md) | 金融機関の削除
+ [POST /api/v1/accounts/:id/acquire](accounts_acquire.md) | 金融機関のデータ再取得
+ [POST /api/v1/accounts/acquire](accounts_acquire_all.md) | 全金融機関のデータ再取得
 
 ## additional_requests
 *金融機関登録の追加の質問*
