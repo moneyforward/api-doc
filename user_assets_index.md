@@ -112,6 +112,7 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
               "asset_class_id": 3,
               "asset_subclass_name": "投資信託",
               "asset_subclass_type": "MUTUAL_FUND",
+              "disp_order": 1
               "id": 12,
               "liquid": 85
             }
