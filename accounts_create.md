@@ -8,6 +8,7 @@ https://moneyforward.com/api/v1/accounts
 name | Description 
 -----------|------------------------
 account[service_id] <br> *required* | 金融機関ID
+account[aggre_start_date] <br> *optional* | データ取得開始日（未設定なら取得可能なデータを全て取得）
 account[service_form_answers][i][:id] <br> *required* | サービスフォームID
 account[service_form_answers][i][:value] <br> *required* | サービスフォームIDに対する値
 
@@ -22,6 +23,7 @@ account[service_form_answers][i][:value] <br> *required* | サービスフォー
     {
       "account": {
         "service_id": 1,
+        "aggre_start_date": "2014-07-01",
         "service_forms_answers": [
           {
             "id": 1,
