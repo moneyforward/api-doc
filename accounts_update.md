@@ -9,7 +9,7 @@ name | Description
 -----------|------------------------
 id <br> *required* | 登録金融機関ID *hashed*
 account[service_form_answers][i][:id] <br> *optional* | サービスフォームID
-account[service_form_answers][i][:value] <br> *optional* | サービスフォームIDに対する値
+account[service_form_answers][i][:value] <br> *optional* | サービスフォームIDに対する値。空文字を設定すると更新しない
 
 ## Example
 
