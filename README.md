@@ -22,7 +22,7 @@
 * 金融機関データ取得エラーマスタの取得
 
 ### 認証方式
-oAuth2
+oAuth2: Authorization Code Flow 
 
 ### データフォーマット
 
