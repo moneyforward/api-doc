@@ -116,7 +116,11 @@
 
 ## 認証
 
-oAuth2
+oAuth2: Authorization Code Flow
+
+## アクセストークンの受け渡し方法
+Authorizationヘッダに以下の形式でaccess_tokenをセットする  
+"Authorization: Bearer YOUR_ACCESS_TOKEN" 
 
 ## データフォーマット
 
