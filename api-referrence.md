@@ -29,7 +29,7 @@
 
  Resource | Description 
 :-----------|-----------------------:
- [GET /api/v1/aggregation_erros](aggregation_errors_index.md) | アグリゲーションのエラーマスタの取得
+ [GET /api/v1/aggregation_errors](aggregation_errors_index.md) | アグリゲーションのエラーマスタの取得
 
 ## services
 *銀行や証券会社、カード等、マネーフォワードで登録可能な金融機関のマスタ。*
