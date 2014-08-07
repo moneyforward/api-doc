@@ -7,7 +7,7 @@ https://moneyforward.com/api/v1/additional_requests/:id
 ## Parameters
 name | Description 
 -----------|------------------------
-id <br> *required* | 登録金融機関ID *hashed*
+id <br> *required* | 追加の質問ID *hashed*
 additional_request[:response_data] <br> *required* | 追加の質問返答
 
 ## Example
