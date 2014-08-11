@@ -60,6 +60,13 @@
  [POST /api/v1/additional_requests](additional_requests_create.md) | 追加の質問の作成
  [PUT /api/v1/additional_requests/:id](additional_requests_update.md) | 追加の質問の更新
 
+## transactions
+*入出金履歴*
+
+ Resource | Description
+:-----------|------------------------:
+ [GET /api/v1/transactions](transactions_index.md) | 入出金履歴の取得
+
 ## user_assets
 *個別資産。現金、株、FX、信用取引のポジション等*
 
