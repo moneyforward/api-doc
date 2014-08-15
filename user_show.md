@@ -8,6 +8,7 @@ https://moneyforward.com/api/v1/user
 
 name | Description 
 -----------|------------------------
+hashed_id | ユーザーID *hashed*
 lock | 連続パスワード入力失敗回数（累積）
 lock_limit | パスワードロック期限（nullならロックされていない
 mf_registered_at | マネーフォワード家計簿サービス利用開始日時
@@ -28,6 +29,7 @@ nothing
         "lock_limit": null,
         "mf_registered_at": "2014-04-19T17:33:36+09:00",
         "mf_withdrew_at": null,
+        "hashed_id": "v2lhShEuROMSG9PfhvvFMA==",
         "premium?": false,
         "only_api_user?": false
       }
