@@ -24,12 +24,6 @@ additional_request[:response_data] <br> *required* | 追加の質問返答
       }
     }
 
-### response
+### response-body
 
-    {
-      "additional_request": {
-        "message": "合言葉／秘密の質問 への記入が必要です。",
-        "request_data": "子供の頃の一番の親友の名前は何ですか",
-        "hashed_id": "V-0qC2rfgKL-ml6nVyhHIw=="
-      }
-    }
+nothing
