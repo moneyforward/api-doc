@@ -89,6 +89,20 @@
  [GET /api/v1/user](user_show.md) | ユーザー情報の取得
  [DELETE /api/v1/user](user_destroy.md) | ユーザーの退会 
 
+## services
+*銀行や証券会社、カード等、マネーフォワードで登録可能な金融機関のマスタ。*
+
+ Resource | Description 
+:-----------|------------------------:
+ [GET /api/v1/services](services_index.md) | 金融機関マスタの取得
+ [GET /api/v1/services/:id](services_show.md) | 金融機関詳細の取得
+
+## service_categories
+*金融機関のカテゴリーマスタ*
+
+ Resource | Description 
+:-----------|-----------------------:
+ [GET /api/v1/service_categories](service_categories_index.md) | 金融機関のカテゴリーマスタの取得
 
 ## asset_classes
 *現金、株式等の資産クラスマスタ*
@@ -104,28 +118,12 @@
 :-----------|-----------------------:
  [GET /api/v1/asset_subclasses](asset_subclasses_index.md) | 資産サブクラスマスタの取得
 
-## service_categories
-*金融機関のカテゴリーマスタ*
-
- Resource | Description 
-:-----------|-----------------------:
- [GET /api/v1/service_categories](service_categories_index.md) | 金融機関のカテゴリーマスタの取得
-
 ## aggregation_errors
 *アグリゲーションのエラーマスタ*
 
  Resource | Description 
 :-----------|-----------------------:
  [GET /api/v1/aggregation_errors](aggregation_errors_index.md) | アグリゲーションのエラーマスタの取得
-
-## services
-*銀行や証券会社、カード等、マネーフォワードで登録可能な金融機関のマスタ。*
-
- Resource | Description 
-:-----------|------------------------:
- [GET /api/v1/services](services_index.md) | 金融機関マスタの取得
- [GET /api/v1/services/:id](services_show.md) | 金融機関詳細の取得
-
 
 ## 認証
 
