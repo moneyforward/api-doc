@@ -125,7 +125,7 @@
 :-----------|-----------------------:
  [GET /api/v1/aggregation_errors](aggregation_errors_index.md) | アグリゲーションのエラーマスタの取得
 
-## 認証
+## 認証方式
 
 oAuth2: Authorization Code Flow
 
