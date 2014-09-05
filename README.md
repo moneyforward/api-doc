@@ -28,4 +28,4 @@ oAuth2: Authorization Code Flow
  
 ## 連絡先
 
-feedback@moneyforward.co.jp 
+api.partner@moneyforward.com
