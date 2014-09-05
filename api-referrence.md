@@ -131,7 +131,7 @@ oAuth2: Authorization Code Flow
 
 ## アクセストークンの連携方法
 Authorizationヘッダ、または X-MFOAuthToken ヘッダに以下の形式でaccess_tokenをセットする  
-"Authorization: Bearer YOUR_ACCESS_TOKEN" 
+"Authorization: Bearer YOUR_ACCESS_TOKEN"  OR "X-MFOAuthToken: Bearer YOUR_ACCESS_TOKEN"
 
 ## データフォーマット
 
