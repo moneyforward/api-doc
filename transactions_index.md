@@ -10,7 +10,7 @@ https://moneyforward.com/api/v1/transactions
 
 name | Description 
 -----------|------------------------
-amouont | 金額(出金はマイナス)
+amount | 金額(出金はマイナス)
 content | 明細
 currency | 通貨
 is_income | 収入: true, 支出: false
