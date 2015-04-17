@@ -12,6 +12,7 @@ code | 株式銘柄コード等。
 cost | 現在未使用フィールド
 entried_at | 資産取得日（特定できなければnull）
 entried_price | 取得価格
+expire_at	| 資産の有効期限（ポイント等）
 jpy_rate | 円換算レート
 name | 資産名称
 profit | 損益
@@ -49,6 +50,7 @@ previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を
         "current_price": 389024.721519843,
         "entried_at": null,
         "entried_price": 300000,
+        "expire_at": null,
         "jpyrate": 1,
         "name": "【デモ】マネフォファンド",
         "profit": 89024.72151984298,
