@@ -19,7 +19,7 @@ jpy_rate | 円換算レート
 name | 資産名称
 profit | 損益
 qty | 数量
-value | 評価額
+value | 評価額またはポイント数
 updated_at | 基準日
 hashed_original_user_asset_id | ヒストリカル作成の元となった、user_assetのid *hashed*
 
