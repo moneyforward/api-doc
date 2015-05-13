@@ -17,7 +17,7 @@ jpy_rate | 円換算レート
 name | 資産名称
 profit | 損益
 qty | 数量 (FXの場合、正の数がロング、負の数がショートポジション)
-value | 評価額
+value | 評価額またはポイント数
 rated_value | 円換算評価額
 rated_profit | 円換算損益
 created_at | レコード作成日
