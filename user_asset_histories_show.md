@@ -17,7 +17,7 @@ jpy_rate | 円換算レート
 name | 資産名称
 profit | 損益
 qty | 数量
-value | 評価額
+value | 評価額またはポイント数
 updated_at | 基準日
 rated_value | 円換算評価額
 rated_profit | 円換算損益
