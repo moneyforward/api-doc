@@ -125,6 +125,13 @@
 :-----------|-----------------------:
  [GET /api/v1/aggregation_errors](aggregation_errors_index.md) | アグリゲーションのエラーマスタの取得
 
+## sso_tokens
+*SSOトークン*
+
+ Resource | Description
+:-----------|-----------------------:
+ [POST /api/v1/sso_tokens](sso_tokens_create.md) | SSOトークンの取得
+
 ## 認証方式
 
 oAuth2: Authorization Code Flow
