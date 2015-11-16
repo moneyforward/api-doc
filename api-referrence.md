@@ -166,4 +166,4 @@ Authorizationヘッダ、または X-MFOAuthToken ヘッダに以下の形式で
 
 ご不明点、ご要望等は以下までご連絡ください。
 
-feedback@moneyforward.co.jp
+pfm-api@moneyforward.co.jp

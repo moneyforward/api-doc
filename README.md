@@ -28,4 +28,4 @@ oAuth2: Authorization Code Flow
  
 ## 連絡先
 
-api.partner@moneyforward.com
+pfm-api@moneyforward.co.jp
