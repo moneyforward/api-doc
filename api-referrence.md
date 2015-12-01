@@ -134,7 +134,7 @@
 
 ## 認証方式
 
-oAuth2: Authorization Code Flow
+OAuth2: Authorization Code Flow
 
 ## アクセストークンの連携方法
 Authorizationヘッダ、または X-MFOAuthToken ヘッダに以下の形式でaccess_tokenをセットする  

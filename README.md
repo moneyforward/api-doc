@@ -15,7 +15,7 @@
 * ユーザ情報の取得
 
 ### 認証方式
-oAuth2: Authorization Code Flow 
+OAuth2: Authorization Code Flow
 
 ## APIリファレンス
 
