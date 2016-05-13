@@ -44,7 +44,6 @@ account[service_form_answers][i][:value] <br> *required* | サービスフォー
         "account_uid_hidden": "999*****",
         "created_at": "2014-05-28T20:46:04+09:00",
         "disp_name": null,
-        "error_id": 0,
         "last_aggregated_at": null,
         "last_succeeded_at": "未取得",
         "memo": null,
