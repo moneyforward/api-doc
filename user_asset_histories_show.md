@@ -40,12 +40,11 @@ previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を
 > **GET** *https://moneyforward.com/api/v1/user_asset_histories/vpxDzM6STgFT4Br7pFTzVQ==*
 
     {
-      "user_asset": {
+      "user_asset_history": {
         "asset_class_id": 3,
         "asset_subclass_id": 12,
         "code": "",
         "cost": 0,
-        "created_at": "2014-05-22T06:33:13+09:00",
         "currency": "JPY",
         "current_price": 389024.721519843,
         "entried_at": null,
@@ -61,6 +60,7 @@ previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を
         "value": 389024.721519843,
         "hashed_id": "vpxDzM6STgFT4Br7pFTzVQ==",
         "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
+        "hashed_original_user_asset_id": "2bdgEA3TcaIPREBaNKdjvw==",
         "previous_value_set": {
             "profit": 80934.72151984298,
             "rated_profit": 383024.721519843,
@@ -93,19 +93,6 @@ previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を
             "service_type": "B_MUFG",
             "yomigana": "ミツビシトウキョウユーエフジェイギンコウ"
           }
-        },
-        "asset_class": {
-          "asset_class_name": "投資信託",
-          "asset_class_type": "MF",
-          "disp_order": 4,
-          "id": 3
-        },
-        "asset_subclass": {
-          "asset_class_id": 3,
-          "asset_subclass_name": "投資信託",
-          "asset_subclass_type": "MUTUAL_FUND",
-          "id": 12,
-          "liquid": 85
         }
       }
     }
