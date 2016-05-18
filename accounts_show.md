@@ -41,7 +41,7 @@ id  <br> *required* | 登録金融機関ID *hashed*
         "account_uid_hidden": "134*****",
         "created_at": "2014-05-29T19:55:16+09:00",
         "disp_name": null,
-        "error_id": 7,
+        "aggregation_error_id": 7,
         "last_aggregated_at": "2014-05-31T17:16:05+09:00",
         "last_succeeded_at": "未取得",
         "memo": null,

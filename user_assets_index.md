@@ -81,7 +81,6 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
               "account_uid_hidden": "dem*",
               "created_at": "2014-04-19T17:33:37+09:00",
               "disp_name": null,
-              "error_id": 5,
               "last_aggregated_at": "2014-05-22T06:33:13+09:00",
               "last_succeeded_at": "05/22 06:33",
               "memo": null,

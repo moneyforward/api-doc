@@ -51,7 +51,6 @@ previous_date <br /> *optional* | 前営業日日付 ※未指定なら前日を
           "account_uid_hidden": "dem*",
           "created_at": "2014-04-19T17:33:37+09:00",
           "disp_name": null,
-          "error_id": 5,
           "last_aggregated_at": "2014-05-22T06:33:13+09:00",
           "last_succeeded_at": "05/22 06:33",
           "memo": null,
