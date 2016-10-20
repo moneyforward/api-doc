@@ -27,6 +27,8 @@ previous_value_set[:profit] | 前営業日損益
 previous_value_set[:rated_value] | 前営業日円換算評価額
 previous_value_set[:rated_profit] | 前営業日円換算損益
 previous_value_set[:updated_at] | 前営業日日付
+sub_accounts[:sub_name] | 支店名
+sub_accounts[:sub_number] | 口座番号
 
 ## Parameters
 name | Description 
@@ -70,6 +72,7 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
             "value": 389024.721519843,
             "hashed_id": "vpxDzM6STgFT4Br7pFTzVQ==",
             "hashed_account_id": "LlPqfqeeCZavwPBLmUy6xg==",
+            "hashed_sub_account_id": "fkwoFjgrCZamqJEEdUy8lo==",
             "previous_value_set": {
                 "profit": 80934.72151984298,
                 "rated_profit": 383024.721519843,
@@ -88,7 +91,7 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
               "msg_flag": 0,
               "msg_time": null,
               "next_aggregate_at": "2014-05-25T02:27:08+09:00",
-              "service_category_id": 1,
+              "service_category_id": 2,
               "service_id": 1,
               "status": 2,
               "service": {
@@ -102,6 +105,14 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
                 "service_type": "B_MUFG",
                 "yomigana": "ミツビシトウキョウユーエフジェイギンコウ"
               }
+            },
+            "sub_account": {
+              "service_category_id" : 2,
+              "sub_name" : "本店",
+              "sub_type" : "普通",
+              "sub_number" : "0999999",
+              "disp_name" : null,
+              "created_at" : "2016-10-20T15:57:24+09:00"
             },
             "asset_class": {
               "asset_class_name": "投資信託",
