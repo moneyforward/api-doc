@@ -15,6 +15,8 @@ memo | ユーザーが設定した登録金融機関に関するメモ
 msg_flag | true: messageを表示する false(default): message非表示
 message | ユーザーに通知する必要があるメッセージ
 status | アグリゲーションの状態を表す 0:正常（取得済み）、1:取得中、2:取得エラー、3:取得停止中
+sub_accounts[:sub_name] | 支店名
+sub_accounts[:sub_number] | 口座番号
 
 ## Parameters
 name | Description 
