@@ -51,6 +51,16 @@ limit  <br> *optional*  | 1ページあたりのエレメント数
             "service_id": 1,
             "status": 2,
             "hashed_id": "LlPqfqeeCZavwPBLmUy6xg==",
+            "sub_accounts" : [
+              {
+                "sub_name" : null,
+                "sub_number" : null
+              },
+              {
+                "sub_name" : "本店",
+                "sub_number" : "0999999",
+              }
+            ],
             "service": {
               "category_name": "銀行",
               "category_type": "BANK",
