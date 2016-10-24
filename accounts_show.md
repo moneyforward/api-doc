@@ -16,6 +16,8 @@ memo | ユーザーが設定した登録金融機関に関するメモ
 msg_flag | true: messageを表示する false(default): message非表示
 message | ユーザーに通知する必要があるメッセージ
 status | アグリゲーションの状態を表す 0:正常（取得済み）、1:取得中、2:取得エラー、3:取得停止中
+sub_accounts[:sub_name] | 支店名
+sub_accounts[:sub_number] | 口座番号
 exclusive_service_forms | 金融機関登録に必要なフォーム情報のリスト
 exclusive_service_form[encrypt_flag] | 暗号化対象項目
 exclusive_service_form[format] | 入力値の制約を正規表現チェック。ブランクは正規表現によるチェックなし。input_typeが'radio' の場合は、radioボタンの選択項目リスト
@@ -53,6 +55,16 @@ id  <br> *required* | 登録金融機関ID *hashed*
         "service_id": 7,
         "status": 2,
         "hashed_id": "84dG3OLcZt_gLm66DESKzw==",
+        "sub_accounts" : [
+          {
+            "sub_name" : null,
+            "sub_number" : null
+          },
+          {
+            "sub_name" : "本店",
+            "sub_number" : "0999999",
+          }
+        ],
         "service": {
           "category_name": "銀行",
           "category_type": "BANK",
