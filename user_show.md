@@ -9,6 +9,7 @@ https://moneyforward.com/api/v1/user
 name | Description 
 -----------|------------------------
 hashed_id | ユーザーID *hashed*
+calc_st_day | 毎月の集計期間の開始日
 lock | 連続パスワード入力失敗回数（累積）
 lock_limit | パスワードロック期限（nullならロックされていない
 mf_registered_at | マネーフォワード家計簿サービス利用開始日時
@@ -25,6 +26,7 @@ nothing
 
     {
       "user": {
+        "calc_st_day": 25,
         "lock": 0,
         "lock_limit": null,
         "mf_registered_at": "2014-04-19T17:33:36+09:00",
