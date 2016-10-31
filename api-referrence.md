@@ -41,6 +41,10 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
 
     /oauth/v2/token
 
+## OpenID Connect個人情報エンドポイント
+
+    /oauth/userinfo
+
 ## APIへのHTTPメソッドとエンドポイント
 
 ### 金融機関のカテゴリー
