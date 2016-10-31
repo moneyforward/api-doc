@@ -1,4 +1,4 @@
-# Moneyforward API v1.0
+# Moneyforward API
 
 クラウド家計簿Moneyforwardの開発者向けAPIのドキュメントです。
 
@@ -7,7 +7,7 @@
 本APIは現在は、クローズドAPIとして特定のパートナー様へ
 提供をしております。連携に関心がある方は、下記連絡先よりご連絡ください。
 
-### 主な提供機能（2014/8/31現在）
+### 主な提供機能
 
 * 入出金履歴の取得・登録
 * 資産データの取得
@@ -15,7 +15,7 @@
 * ユーザ情報の取得
 
 ### 認証方式
-OAuth2: Authorization Code Flow
+OAuth2: Authorization Code Flowに基づくOpenID Connect
 
 ## APIリファレンス
 
