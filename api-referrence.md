@@ -84,10 +84,10 @@
 ## user
 *ユーザー*
 
- Resource | Description 
-:-----------|------------------------:
- [GET /api/v1/user](user_show.md) | ユーザー情報の取得
- [DELETE /api/v1/user](user_destroy.md) | ユーザーの退会 
+ Resource | Description           | Required scope
+:-----------|------------------------|------:
+ [GET /api/v1/user](user_show.md) | ユーザー情報の取得 | read or write|
+ [DELETE /api/v1/user](user_destroy.md) | ユーザーの退会 | write|
 
 ## services
 *銀行や証券会社、カード等、マネーフォワードで登録可能な金融機関のマスタ。*
