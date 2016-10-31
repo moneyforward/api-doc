@@ -45,16 +45,16 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
 
 ### 金融機関のカテゴリー
 
-|                           |リソース                                                        |
-|---------------------------|---------------------------------------------------------------|
-|金融機関のカテゴリーマスタの取得|[`GET /api/v1/service_categories`](service_categories_index.md)|
+|                         |リソース                                                        |
+|-------------------------|---------------------------------------------------------------|
+|金融機関のカテゴリー一覧の取得|[`GET /api/v1/service_categories`](service_categories_index.md)|
 
 ### 金融機関
 
-|                 |リソース                                       |必要な権限(スコープ)   |
-|-----------------|----------------------------------------------|--------------------|
-|金融機関マスタの取得|[`GET /api/v1/services`](services_index.md)   |`read` または `write`|
-|金融機関詳細の取得  |[`GET /api/v1/services/:id`](services_show.md)|`read` または `write`|
+|               |リソース                                       |必要な権限(スコープ)   |
+|---------------|----------------------------------------------|--------------------|
+|金融機関一覧の取得|[`GET /api/v1/services`](services_index.md)   |`read` または `write`|
+|金融機関詳細の取得|[`GET /api/v1/services/:id`](services_show.md)|`read` または `write`|
 
 ### ユーザー
 
@@ -67,20 +67,20 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
 
 |                    |リソース                                                   |必要な権限(スコープ)   |
 |--------------------|----------------------------------------------------------|--------------------|
-|金融機関のデータ再取得  |[`POST /api/v1/accounts/:id/acquire`](accounts_acquire.md)|`write`             |
-|全金融機関のデータ再取得|[`POST /api/v1/accounts/acquire`](accounts_acquire_all.md)|`write`             |
+|金融機関詳細の再取得    |[`POST /api/v1/accounts/:id/acquire`](accounts_acquire.md)|`write`             |
+|全金融機関の再取得     |[`POST /api/v1/accounts/acquire`](accounts_acquire_all.md)|`write`             |
 |登録金融機関リストの取得|[`GET /api/v1/accounts`](accounts_index.md)               |`read` または `write`|
 |金融機関の登録        |[`POST /api/v1/accounts`](accounts_create.md)              |`write`             |
-|登録金融機関詳細の取得| |[`GET /api/v1/accounts/:id`](accounts_show.md)            |`read` または　`write`|
+|登録金融機関詳細の取得  |[`GET /api/v1/accounts/:id`](accounts_show.md)            |`read` または　`write`|
 |                    |`PATCH /api/v1/accounts/:id`                              |`write`              |
-||登録機関の更新       |[`PUT /api/v1/accounts/:id`](accounts_update.md)           |`write`             |
+|登録機関の更新        |[`PUT /api/v1/accounts/:id`](accounts_update.md)           |`write`             |
 |金融機関の削除        |[`DELETE /api/v1/accounts/:id`](accounts_destroy.md)       |`write`             |
 
 ### 自動取得時のエラー
 
-|                              |リソース                                                        |
-|------------------------------|---------------------------------------------------------------|
-|アグリゲーションのエラーマスタの取得|[`GET /api/v1/aggregation_errors`](aggregation_errors_index.md)|
+|                         |リソース                                                        |
+|-------------------------|---------------------------------------------------------------|
+|自動取得時のエラーの一覧の取得|[`GET /api/v1/aggregation_errors`](aggregation_errors_index.md)|
 
 ### 金融機関登録の追加の質問
 
@@ -92,55 +92,55 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
 
 ### 現金、株式等の資産クラス
 
-|                   |リソース　                                            |必要な権限(スコープ)   |
-|-------------------|----------------------------------------------------|--------------------|
-|資産クラスマスタの取得|[`GET /api/v1/asset_classes`](asset_classes_index.md)|`read` または `write`|
+|                 |リソース　                                            |必要な権限(スコープ)   |
+|-----------------|----------------------------------------------------|--------------------|
+|資産クラス一覧の取得|[`GET /api/v1/asset_classes`](asset_classes_index.md)|`read` または `write`|
 
 ### 資産クラスごとの資産合計
 
-|                       |リソース                                                         |必要な権限(スコープ)   |
-|-----------------------|----------------------------------------------------------------|--------------------|
-|資産クラス別合計リストの取得|[`GET /api/v1/user_asset_classes`](user_asset_classes_index.md)|`read` または `write`|
+|                     |リソース                                                         |必要な権限(スコープ)   |
+|---------------------|----------------------------------------------------------------|--------------------|
+|資産クラスごとの合計の取得|[`GET /api/v1/user_asset_classes`](user_asset_classes_index.md)|`read` または `write`|
 
 ### 資産クラスごとの資産合計の履歴
 
 |                           |                                                                               |
 |---------------------------|-------------------------------------------------------------------------------|
-|資産クラス別合計履歴リストの取得|[`GET /api/v1/user_asset_class_histories`](user_asset_class_histories_index.md)|
+|資産クラスごとの合計の履歴の取得|[`GET /api/v1/user_asset_class_histories`](user_asset_class_histories_index.md)|
 
 ### 資産クラスをさらに細かく分類した資産サブクラス
 
-|                      |                                                           |必要な権限(スコープ)   |
-|----------------------|-----------------------------------------------------------|--------------------|
-|資産サブクラスマスタの取得|[`GET /api/v1/asset_subclasses`](asset_subclasses_index.md)|`read` または `write`|
+|                    |                                                           |必要な権限(スコープ)   |
+|--------------------|-----------------------------------------------------------|--------------------|
+|資産サブクラス一覧の取得|[`GET /api/v1/asset_subclasses`](asset_subclasses_index.md)|`read` または `write`|
 
 ### 資産サブクラス、サブアカウント、通貨ごとの資産合計
 
-|                    |リソース                                                                |必要な権限(スコープ)   |
-|--------------------|----------------------------------------------------------------------|--------------------|
-|個別資産合計リストの取得|[`GET /api/v1/user_asset_summaries`](user_asset_summaries_index.md)   |`read` または `write`|
-|個別資産合計詳細の取得  |[`GET /api/v1/user_asset_summaries/:id`](user_asset_summaries_show.md)|`read` または `write`|
+|                             |リソース                                                              |必要な権限(スコープ)   |
+|-----------------------------|---------------------------------------------------------------------|--------------------|
+|資産サブクラスごとの合計の取得    |[`GET /api/v1/user_asset_summaries`](user_asset_summaries_index.md)  |`read` または `write`|
+|資産サブクラスごとの合計詳細の取得|[`GET /api/v1/user_asset_summaries/:id`](user_asset_summaries_show.md)|`read` または `write`|
 
 ### 資産サブクラスごとの資産合計の履歴
 
 |                        |リソース                                                                               |必要な権限(スコープ)   |
 |------------------------|-------------------------------------------------------------------------------------|--------------------|
-|個別資産合計履歴リストの取得|[`GET /api/v1/user_asset_summary_histories`](user_asset_summary_histories_index.md)   |`read` または `write`|
-|個別資産合計履歴詳細の取得  |[`GET /api/v1/user_asset_summary_histories/:id`](user_asset_summary_histories_show.md)|`read` または `write`|
+|資産サブクラスごとの合計の履歴一覧の取得|[`GET /api/v1/user_asset_summary_histories`](user_asset_summary_histories_index.md)   |`read` または `write`|
+|資産合計履歴詳細の取得  |[`GET /api/v1/user_asset_summary_histories/:id`](user_asset_summary_histories_show.md)|`read` または `write`|
 
 ### 資産
 
-|              |リソース                                             |必要な権限(スコープ)   |
-|--------------|----------------------------------------------------|--------------------|
-|資産リストの取得|[`GET /api/v1/user_assets`](user_assets_index.md)   |`read` または `write`|
-|資産詳細の取得  |[`GET /api/v1/user_assets/:id`](user_assets_show.md)|`read` または `write`|
+|            |リソース                                             |必要な権限(スコープ)   |
+|------------|----------------------------------------------------|--------------------|
+|資産一覧の取得|[`GET /api/v1/user_assets`](user_assets_index.md)   |`read` または `write`|
+|資産詳細の取得|[`GET /api/v1/user_assets/:id`](user_assets_show.md)|`read` または `write`|
 
 ### 資産の履歴
 
-|                 |リソース                                                             |必要な権限(スコープ)   |
-|-----------------|--------------------------------------------------------------------|--------------------|
-|資産履歴リストの取得|[`GET /api/v1/user_asset_histories](user_asset_histories_index.md`)   |`read` または `write`|
-|資産履歴詳細の取得  |[`GET /api/v1/user_asset_histories/:id](user_asset_histories_show.md`)|`read` または `write`|
+|                     |リソース                                                             |必要な権限(スコープ)   |
+|---------------------|--------------------------------------------------------------------|--------------------|
+|資産の履歴の取得       |[`GET /api/v1/user_asset_histories](user_asset_histories_index.md`)   |`read` または `write`|
+|資産の履歴の詳細の取得  |[`GET /api/v1/user_asset_histories/:id](user_asset_histories_show.md`)|`read` または `write`|
 
 ### 入出金履歴
 
