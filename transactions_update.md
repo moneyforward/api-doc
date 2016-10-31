@@ -20,7 +20,7 @@ middle_category_id <br> *optional* | 中項目カテゴリ
 ## Example
 
 ***
-> **POST** https://moneyforward.com/api/v1/transactions/wCrwASIoneiAT121fgjI-Q
+> **PUT** https://moneyforward.com/api/v1/transactions/wCrwASIoneiAT121fgjI-Q
 
     {
       "transaction" : {
