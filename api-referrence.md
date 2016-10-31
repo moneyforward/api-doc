@@ -33,11 +33,11 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
         ]
     }
 
-## OpenID Connectエンドポイント
+## OpenID Connect認可エンドポイント
 
     /oauth/authorize
 
-## トークンエンドポイント
+## OpenID Connectトークンエンドポイント
 
     /oauth/v2/token
 
