@@ -5,26 +5,13 @@
 
 OAuth2: Authorization Code Flow
 
-## アクセストークンの連携方法
-ヘッダに、次のいずれかの値を与える。`<アクセストークン>`にはアクセストークンが入る。
-
-    Authorization: Bearer <アクセストークン>
-
-または
-
-    X-MFOAuthToken: Bearer <アクセストークン>
-
 ## データフォーマット
 
 リクエスト、レスポンスともにJSON形式。
 
-## ノーマルレスポンスのHTTPステータスコード
+ノーマルレスポンスはHTTPステータスコード200を返します。
 
-200 を返します。
-
-## 共通エラーレスポンス
-
-HTTPステータスコードは適切な4XX〜5xxのコードを返します。
+エラー時は適切なHTTPステータスコード4XX〜5xxを返します。
 
 レスポンスbodyの例
 
@@ -39,17 +26,21 @@ HTTPステータスコードは適切な4XX〜5xxのコードを返します。
 
 ## エンドポイントと接続方法
 
-### OpenID Connect認可エンドポイント
+### OpenID Connect
 
-    /oauth/authorize
+|           |メソッド        |URI             |必要なパラメーター                               |
+|-----------|-------------|----------------|---------------------------------------------|
+|認可       |GET または POST|/oauth/authorize|scope, response_type, client_id, redirect_uri|
+|トークン     |POST         |/oauth/v2/token |grant_type, code, redirect_uri, client_id     |
+|個人認可情報|GET または POST|/oauth/userinfo |以下参照                                       |
 
-### OpenID Connectトークンエンドポイント
+個人認可情報では、ヘッダに、以下ののいずれかの値を与える。`<アクセストークン>`にはアクセストークンが入る。
 
-    /oauth/v2/token
+    Authorization: Bearer <アクセストークン>
 
-### OpenID Connect個人情報エンドポイント
+または
 
-    /oauth/userinfo
+    X-MFOAuthToken: Bearer <アクセストークン>
 
 ### 金融機関のカテゴリー
 
