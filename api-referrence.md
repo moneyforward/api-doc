@@ -44,83 +44,85 @@ OAuth2: Authorization Code Flow
 
 ### 金融機関のカテゴリー
 
-|                                       |メソッド |URI                       |必要な権限(スコープ)   |
-|---------------------------------------|------|--------------------------|-------------------|
-|[一覧の取得](service_categories_index.md)|GET   |/api/v1/service_categories|`read` または `write`|
+|                                       |メソッド|URI                      |必要な権限(スコープ)|
+|---------------------------------------|------|--------------------------|----------------|
+|[一覧の取得](service_categories_index.md)|GET   |/api/v1/service_categories|なし             |
 
 ### 金融機関
 
-|                             |メソッド |URI                 |必要な権限(スコープ)   |
-|-----------------------------|------|--------------------|-------------------|
-|[一覧の取得](services_index.md)|GET   |/api/v1/services    |`read` または `write`|
-|[個別の取得](services_show.md) |GET   |/api/v1/services/:id|`read` または `write`|
-
-### ユーザー
-
-|                           |メソッド |URI         |必要な権限(スコープ)    |
-|---------------------------|------|------------|--------------------|
-|[個別の取得](user_show.md)   |GET   |/api/v1/user|`read` または `write`|
-|[個別の退会](user_destroy.md)|DELETE|/api/v1/user|`write`             |
-
-### ユーザーが登録している金融機関
-
-|                                     |メソッド |URI                          |必要な権限(スコープ)   |
-|-------------------------------------|------|-----------------------------|--------------------|
-|[個別の再取得](accounts_acquire.md)　  |POST   |/api/v1/accounts/:id/acquire|`write`             |
-|[一覧の再取得](accounts_acquire_all.md)|POST  |/api/v1/accounts/acquire     |`write`             |
-|[一覧の取得](accounts_index.md)        |GET   |/api/v1/accounts             |`read` または `write`|
-|[個別の登録](accounts_create.md)       |POST  |/api/v1/accounts             |`write`             |
-|[個別の取得](accounts_show.md)         |GET   |/api/v1/accounts/:id         |`read` または　`write`|
-|                                     |PATCH |/api/v1/accounts/:id         |`write`             |
-|[個別の更新](accounts_update.md)       |PUT   |/api/v1/accounts/:id         |`write`             |
-|[個別の削除](accounts_destroy.md)      |DELETE| /api/v1/accounts/:id        |`write`             |
+|                             |メソッド |URI                 |必要な権限(スコープ)|
+|-----------------------------|------|--------------------|------------------|
+|[一覧の取得](services_index.md)|GET   |/api/v1/services    |なし               |
+|[個別の取得](services_show.md) |GET   |/api/v1/services/:id|なし               |
 
 ### 自動取得時のエラー
 
-|                                       |メソッド |URI                       |必要な権限(スコープ)   |
-|---------------------------------------|------|--------------------------|--------------------|
-|[一覧の取得](aggregation_errors_index.md)|GET   |/api/v1/aggregation_errors|`read` または `write`|
+|                                       |メソッド |URI                     |必要な権限(スコープ)|
+|---------------------------------------|------|--------------------------|----------------|
+|[一覧の取得](aggregation_errors_index.md)|GET   |/api/v1/aggregation_errors|なし             |
+
+### ユーザー
+
+|                           |メソッド|URI        |必要な権限(スコープ)   |
+|---------------------------|------|------------|-------------------|
+|[個別の取得](user_show.md)   |GET   |/api/v1/user|なし                |
+
+### ユーザーが登録している金融機関
+
+|                                     |メソッド|URI                          |必要な権限(スコープ) |
+|-------------------------------------|------|-----------------------------|------------------|
+|[一覧の取得](accounts_index.md)        |GET   |/api/v1/accounts             |`accounts`        |
+|[一覧の再取得](accounts_acquire_all.md)|POST  |/api/v1/accounts/acquire     |`acquire_accounts`|
+|[個別の登録](accounts_create.md)       |POST  |/api/v1/accounts             |`manage_accounts` |
+|[個別の取得](accounts_show.md)         |GET   |/api/v1/accounts/:id         |`accounts`        |
+|[個別の更新](accounts_update.md)       |PATCH |/api/v1/accounts/:id         |`manage_accounts` |
+|[個別の更新](accounts_update.md)       |PUT   |/api/v1/accounts/:id         |`manage_accounts` |
+|[個別の再取得](accounts_acquire.md)　  |POST   |/api/v1/accounts/:id/acquire|`acquire_accounts` |
+|[個別の削除](accounts_destroy.md)      |DELETE| /api/v1/accounts/:id        |`manage_accounts` |
 
 ### 金融機関登録の追加の質問
 
-|                                    |メソッド |URI                           |必要な権限(スコープ)|
-|------------------------------------|------|------------------------------|-----------------|
-|[作成](additional_requests_create.md)|POST |/api/v1/additional_requests    |`write`          |
-|[更新](additional_requests_update.md)|PUT  |/api/v1/additional_requests/:id|`write`          |
-|                                    |PATCH|/api/v1/additional_requests/:id|`write`          |
+|                                    |メソッド|URI                            |必要な権限(スコープ)|
+|------------------------------------|------|-------------------------------|------------------|
+|[作成](additional_requests_create.md)|POST  |/api/v1/additional_requests    |`manage_accounts` |
+|[更新](additional_requests_update.md)|PATCH |/api/v1/additional_requests/:id|`manage_accounts` |
+|[更新](additional_requests_update.md)|PUT   |/api/v1/additional_requests/:id|`manage_accounts` |
 
 ### 現金、株式等の資産クラス
 
-|                                                                |メソッド |URI                               |必要な権限(スコープ)     |
-|----------------------------------------------------------------|------|----------------------------------|--------------------|
-|[クラスの一覧の取得](asset_classes_index.md)                              |GET   |/api/v1/asset_classes             |`read` または `write`|
-|[各資産の合計の一覧の取得](user_asset_classes_index.md)             |GET   |/api/v1/user_asset_classes        |`read` または `write`|
-|[各資産の合計の履歴の取得](user_asset_class_histories_index.md)|GET   |/api/v1/user_asset_class_histories|`read` または `write`|
+|                                                          |メソッド|URI                               |必要な権限(スコープ)|
+|----------------------------------------------------------|------|----------------------------------|-----------------|
+|[クラスの一覧の取得](asset_classes_index.md)                  |GET   |/api/v1/asset_classes             |なし             |
+|[各資産の合計の一覧の取得](user_asset_classes_index.md)        |GET   |/api/v1/user_asset_classes        |`assets`         |
+|[各資産の合計の履歴の取得](user_asset_class_histories_index.md)|GET   |/api/v1/user_asset_class_histories|`assets`         |
 
 ### 資産クラスをさらに細かく分類した資産サブクラス、サブアカウント、通貨
 
-|                                                                  |メソッド |URI                                   |必要な権限(スコープ)     |
-|------------------------------------------------------------------|------|--------------------------------------|--------------------|
-|[サブクラスの一覧の取得](asset_subclasses_index.md)                    |GET   |/api/v1/asset_subclasses              |`read` または `write`|
-|[各資産の合計の一覧の取得](user_asset_summaries_index.md)             |GET   |/api/v1/user_asset_summaries           |`read` または `write`|
-|[個別の資産の合計の取得](user_asset_summaries_show.md)   　           |GET   |/api/v1/user_asset_summaries/:id       |`read` または `write`|
-|[各資産の合計の一覧の履歴の取得](user_asset_summary_histories_index.md)|GET   |/api/v1/user_asset_summary_histories   |`read` または `write`|
-|[個別の資産の合計の履歴の取得](user_asset_summary_histories_show.md)    |GET  |/api/v1/user_asset_summary_histories/:id|`read` または `write`|
+|                                                                  |メソッド|URI                                   |必要な権限(スコープ)|
+|------------------------------------------------------------------|------|--------------------------------------|------------------|
+|[サブクラスの一覧の取得](asset_subclasses_index.md)                   |GET   |/api/v1/asset_subclasses              |なし|
+|[各資産の合計の一覧の取得](user_asset_summaries_index.md)             |GET   |/api/v1/user_asset_summaries           |`assets`|
+|[個別の資産の合計の取得](user_asset_summaries_show.md)   　           |GET   |/api/v1/user_asset_summaries/:id       |`assets`|
+|[各資産の合計の一覧の履歴の取得](user_asset_summary_histories_index.md)|GET   |/api/v1/user_asset_summary_histories   |`assets`|
+|[個別の資産の合計の履歴の取得](user_asset_summary_histories_show.md)   |GET  |/api/v1/user_asset_summary_histories/:id|`assets`|
 
 ### 資産
 
-|                                              |メソッド |URI                             |必要な権限(スコープ)   |
-|----------------------------------------------|------|--------------------------------|--------------------|
-|[一覧の取得](user_assets_index.md)              |GET   |/api/v1/user_assets             |`read` または `write`|
-|[個別の取得](user_assets_show.md)               |GET   |/api/v1/user_assets/:id         |`read` または `write`|
-|[全体の履歴の取得](user_asset_histories_index.md)|GET   |/api/v1/user_asset_histories    |`read` または `write`|
-|[個別の履歴の取得](user_asset_histories_show.md) |GET   |/api/v1/user_asset_histories/:id|`read` または `write`|
+|                                              |メソッド|URI                            |必要な権限(スコープ)|
+|----------------------------------------------|------|--------------------------------|----------------|
+|[一覧の取得](user_assets_index.md)              |GET   |/api/v1/user_assets             |`assets`        |
+|[個別の取得](user_assets_show.md)               |GET   |/api/v1/user_assets/:id         |`assets`        |
+|[全体の履歴の取得](user_asset_histories_index.md)|GET   |/api/v1/user_asset_histories    |`assets`        |
+|[個別の履歴の取得](user_asset_histories_show.md) |GET   |/api/v1/user_asset_histories/:id|`assets`        |
 
 ### 入出金
 
-|                                 |メソッド |URI                 |必要な権限(スコープ)   |
-|---------------------------------|------|--------------------|--------------------|
-|[履歴の取得](transactions_index.md)|GET   |/api/v1/transactions|`read` または `write`|
+|                                      |メソッド|URI                                  |必要な権限(スコープ)|
+|--------------------------------------|-------|-------------------------------------|----------------|
+|[種類の一覧の取得](transactions_index.md)|GET    |/api/v1/transactions/categories      |`transactions`  |
+|[一覧の取得](transactions_index.md)     |GET    |/api/v1/transactions                 |`transactions`  |
+|[合計の取得](transactions_index.md)     |GET    |/api/v1/derived/transaction_summaries|`transactions`  |
+|[履歴の取得](transactions_index.md)     |GET    |/api/v1/derived/transaction_histories|`transactions`  |
 
 ## 連絡先
 
