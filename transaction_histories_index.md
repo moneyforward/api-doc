@@ -1,18 +1,17 @@
-# GET /api/v1/derived/transaction_summaries
+# GET /api/v1/derived/transaction_histories
 
-指定された期間まで遡り現在からその期間までの収支履歴を取得します。
-週 or 月単位で取得できます。
+指定された過去から現在までの期間の収支履歴を取得します。期間は週または月の倍数で指定します。
 
 ## Resource URL
 
-https://moneyforward.com/api/v1/derived/transaction_summaries
+https://moneyforward.com/api/v1/derived/transaction_histories
 
 ## Parameters
 
 Name | Description
 ----- | -----
-past <br> *optional* | 遡りたい過去 <br> ※ デフォルト: `0`
-period <br> *optional* | `week` or `month` <br> ※ デフォルト: `month`
+period <br> *optional* | 期間を指定する単位。`week` または `month` 。デフォルト: `month`。
+past <br> *optional* | 上記単位で計った期間の長さ。 デフォルト: `0`。
 
 ## Example
 
