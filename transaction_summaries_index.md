@@ -1,7 +1,6 @@
 # GET /api/v1/derived/transaction_summaries
 
-**ある特定期間** でのカテゴリ毎の収支を取得します。
-週 or 月単位で取得できます。
+指定された過去から現在までの期間のカテゴリ毎の収支を取得します。期間は週または月の倍数で指定します。
 
 ## Resource URL
 
@@ -11,8 +10,8 @@ https://moneyforward.com/api/v1/derived/transaction_summaries
 
 Name | Description
 ----- | -----
-past <br> *optional* | 遡りたい過去 <br> ※ デフォルト: `0`
-period <br> *optional* | `week` or `month` <br> ※ デフォルト: `month`
+period <br> *optional* | 期間を指定する単位。`week` または `month` 。デフォルト: `month`。
+past <br> *optional* | 上記単位で計った期間の長さ。 デフォルト: `0`。
 
 ## Example
 

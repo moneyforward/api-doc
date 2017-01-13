@@ -125,8 +125,8 @@ OAuth2: Authorization Code Flow
 |--------------------------------------|-------|-------------------------------------|----------------|
 |[種類の一覧の取得](transactions_index.md)|GET 　  |/api/v1/transactions/categories      |`transactions`  |
 |[一覧の取得](transactions_index.md)     |GET 　  |/api/v1/transactions                 |`transactions`  |
-|[合計の取得](transactions_index.md)     |GET 　  |/api/v1/derived/transaction_summaries|`transactions`  |
-|[履歴の取得](transactions_index.md)     |GET    |/api/v1/derived/transaction_histories|`transactions`  |
+|[合計の取得](transaction_summaries_index.md)     |GET 　  |/api/v1/derived/transaction_summaries|`transactions`  |
+|[履歴の取得](transaction_histories_index.md)     |GET    |/api/v1/derived/transaction_histories|`transactions`  |
 
 ## 連絡先
 
