@@ -10,7 +10,7 @@ https://moneyforward.com/api/v1/transactions
 
 name | Description 
 -----------|------------------------
-amount | 金額(出金はマイナス)
+amount | 金額(正は入金、負は出金)
 content | 明細
 currency | 通貨
 is_income | 収入: true, 支出: false
@@ -20,6 +20,8 @@ large_category_id | 大項目ID
 middle_category_id | 中項目ID
 created_at | マネーフォワードへのデータ登録日
 updated_at | 記帳日
+hashed_id | 本件入出金履歴項目のID
+hashed_partner_act_id | 振替を構成する反対側の入出金履歴項目のID
 hashed_account_id | 入出金元の金融機関ID
 hashed_sub_account_id | 入出金元の補助金融機関ID
 
