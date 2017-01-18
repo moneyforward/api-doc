@@ -62,6 +62,7 @@ limit <br /> *optional* | 1ページあたりのエレメント数.デフォル�
             "middle_category_id": 32,
             "updated_at": "2014-07-20T00:00:00+09:00",
             "hashed_id": "dYDn1yKM37qFejzmwbf2KA==",
+            "hashed_partner_act_id": "PaWHbkj4F6W-agLF69LsHQ",
             "hashed_account_id": "E8NWqTw4e3TnXffLl50f-Q==",
             "hashed_sub_account_id": "dyJaw7FlOG41c1C-LKndFA==",
             "account": {
