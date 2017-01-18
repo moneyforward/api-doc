@@ -72,6 +72,7 @@ OAuth2: Authorization Code Flow
 |                           |メソッド|URI        |必要な権限(スコープ)   |
 |---------------------------|------|------------|-------------------|
 |[個別の取得](user_show.md) 　 |GET 　 |/api/v1/user|なし                |
+[comment]: <> (|[個別の削除](user_destroy.md) 　 |DELETE 　 |/api/v1/user|nondisclosed                |)
 
 ### ユーザーが登録している金融機関
 
@@ -81,8 +82,8 @@ OAuth2: Authorization Code Flow
 |[一覧の再取得](accounts_acquire_all.md)|POST  |/api/v1/accounts/acquire     |`acquire_accounts`|
 |[個別の登録](accounts_create.md)       |POST  |/api/v1/accounts             |`manage_accounts` |
 |[個別の取得](accounts_show.md)         |GET   |/api/v1/accounts/:id 　 　　　 　 |`accounts`        |
-|[個別の更新](accounts_update.md)       |PATCH または PUT|/api/v1/accounts/:id         |`manage_accounts` |
 |[個別の再取得](accounts_acquire.md)　  |POST 　 |/api/v1/accounts/:id/acquire|`acquire_accounts` |
+|[個別の更新](accounts_update.md)       |PATCH または PUT|/api/v1/accounts/:id         |`manage_accounts` |
 |[個別の削除](accounts_destroy.md)      |DELETE| /api/v1/accounts/:id        |`manage_accounts` |
 
 ### 金融機関登録の追加の質問
@@ -123,8 +124,10 @@ OAuth2: Authorization Code Flow
 
 |                                      |メソッド|URI                                  |必要な権限(スコープ)|
 |--------------------------------------|-------|-------------------------------------|----------------|
-|[種類の一覧の取得](transactions_index.md)|GET 　  |/api/v1/transactions/categories      |`transactions`  |
+|[種類の一覧の取得](categories_index.md) |GET 　  |/api/v1/transactions/categories      |`transactions`  |
 |[一覧の取得](transactions_index.md)     |GET 　  |/api/v1/transactions                 |`transactions`  |
+|[個別の登録](transactions_create.md)     |POST 　  |/api/v1/transactions                 |`manage_transactions`  |
+|[個別の更新](transactions_update.md)     |PATCH または PUT 　  |/api/v1/transactions/:id                 |`manage_transactions`  |
 |[合計の取得](transaction_summaries_index.md)     |GET 　  |/api/v1/derived/transaction_summaries|`transactions`  |
 |[履歴の取得](transaction_histories_index.md)     |GET    |/api/v1/derived/transaction_histories|`transactions`  |
 
