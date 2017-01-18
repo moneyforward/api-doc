@@ -72,7 +72,6 @@ OAuth2: Authorization Code Flow
 |                           |メソッド|URI        |必要な権限(スコープ)   |
 |---------------------------|------|------------|-------------------|
 |[個別の取得](user_show.md) 　 |GET 　 |/api/v1/user|なし                |
-[comment]: <> (|[個別の削除](user_destroy.md) 　 |DELETE 　 |/api/v1/user|nondisclosed                |)
 
 ### ユーザーが登録している金融機関
 
