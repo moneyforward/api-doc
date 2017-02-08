@@ -130,13 +130,6 @@ OAuth2: Authorization Code Flow
 |[合計の取得](transaction_summaries_index.md)     |GET 　  |/api/v1/derived/transaction_summaries|`transactions`  |
 |[履歴の取得](transaction_histories_index.md)     |GET    |/api/v1/derived/transaction_histories|`transactions`  |
 
-### SSOトークン
-
-|                           |メソッド |URI               |必要な権限(スコープ)   |
-|---------------------------|------|------------------|--------------------|
-|[取得](sso_tokens_create.md)|POST  |/api/v1/sso_tokens|`manage_sso`|
-
-
 ## 連絡先
 
 ご不明点、ご要望等は以下までご連絡ください。
