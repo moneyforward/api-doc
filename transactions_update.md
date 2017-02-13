@@ -11,7 +11,7 @@ https://moneyforward.com/api/v1/transactions/:id
 Name | Description
 -----------|------------------------
 id <br> *required* | 入出金ID。GET /api/v1/transactionsやPOST /api/v1/transactionsの返り値で得られるtransactionのhashed_idを与える。
-account_id <br> *required* | 入金元・出金先の財布口座。GET /api/v1/accountsにより得られる一覧のうちで該当する財布口座のhashed_account_idの値を与える。自動連携している口座は指定出来ない。財布口座の場合には、口座とサブアカウントが1対1対応しているので、hashed_sub_account_idも決定される。
+account_id <br> *required* | 入金元・出金先の財布口座。GET /api/v1/accountsにより得られる一覧のうちで該当する財布口座(account)のhashed_idを与える。自動連携している口座は指定出来ない。財布口座の場合には、口座とサブアカウントが1対1対応しているので、sub_accountも決定される。
 updated_at <br> *optional* | 入出金日。YY/MM/DD形式で記す。省略した場合には現在日になる。
 content <br> *optional* | 入出金内容を記す文字列。最大65535byte。
 large_category_id <br> *optional* | 大項目カテゴリ。省略した場合には未設定(large_category_id=0)になる。
