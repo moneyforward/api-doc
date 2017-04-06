@@ -31,7 +31,7 @@ OAuth2: Authorization Code Flow
 | 　         |メソッド        |URI 　  　 　 　 　 　|必要なパラメーター                               |
 |-----------|-------------|----------------|---------------------------------------------|
 |認可       |GET または POST|/oauth/authorize|scope, response_type, client_id, redirect_uri|
-|トークン     |POST         |/oauth/v2/token |grant_type, code, redirect_uri, client_id     |
+|トークン     |POST         |/oauth/v2/token |grant_type, code, redirect_uri, client_id, client_secret|
 
 ### 認可情報
 
