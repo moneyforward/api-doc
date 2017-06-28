@@ -107,8 +107,6 @@ OAuth2: Authorization Code Flow
 |[サブクラスの一覧の取得](asset_subclasses_index.md) 　 　 　 　 　 　 　  　  |GET 　 |/api/v1/asset_subclasses 　 　 　 　 　 　  |なし|
 |[各資産の合計の一覧の取得](user_asset_summaries_index.md) 　 　 　 　 　 　 |GET 　 |/api/v1/user_asset_summaries 　 　 　 　 　 |`assets`|
 |[個別の資産の合計の取得](user_asset_summaries_show.md) 　 　           |GET   |/api/v1/user_asset_summaries/:id       |`assets`|
-|[各資産の合計の一覧の履歴の取得](user_asset_summary_histories_index.md)|GET   |/api/v1/user_asset_summary_histories   |`assets`|
-|[個別の資産の合計の履歴の取得](user_asset_summary_histories_show.md)   |GET  |/api/v1/user_asset_summary_histories/:id|`assets`|
 
 ### 資産
 
