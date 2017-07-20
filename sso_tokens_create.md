@@ -1,33 +1,39 @@
-# POST /api/v1/sso_tokens
+# ユーザーのSSOトークンを取得する
 
-SSOトークン取得
+## 要求
 
-## Resrouce URL
-https://moneyforward.com/api/v1/sso_tokens
+### エンドポイント
 
-## Parameters
-name | Description
------|-----
-sso_tokens[redirect_path] | リダイレクト先URI(default=/)
+```
+POST https://moneyforward.com/api/v1/sso_tokens
+```
 
-## Example
+### パラメーター
 
-### request
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| 本文 | 随意; デフォルト: `/` | `sso_tokens[redirect_path]` | リダイレクト先URI |
 
-> **POST** https://moneyforward.com/api/v1/sso_tokens
+### 例
 
-### request-body
+```
+POST https://moneyforward.com/api/v1/sso_tokens
 
-    {
-      "sso_token": {
-        "redirect_path": "/accounts"
-      }
-    }
+{
+  "sso_token": {
+    "redirect_path": "/accounts"
+  }
+}
+```
 
-### response
+## 応答の本文
 
-    {
-      "sso_token" {
-        "token": トークン文字列
-      }
-    }
+### 例
+
+```
+{
+  "sso_token" {
+    "token": "トークン文字列"
+  }
+}
+```

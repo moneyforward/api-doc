@@ -1,21 +1,26 @@
-# POST /api/v1/accounts/:id/acquire
-金融機関のデータ再取得を行う
+# 特定の口座の情報をマネーフォワードに金融機関から再取得させる
 
-## Resrouce URL
-https://moneyforward.com/api/v1/accounts/:id/acquire
+## 要求
 
-## Parameters
-name | Description 
------------|------------------------
-id <br> *required* | 登録金融機関ID *hashed*
+### エンドポイント
 
-## Example
+```
+POST https://moneyforward.com/api/v1/accounts/:id/acquire
+```
 
-### request
+### パラメーター
 
-> **POST** https://moneyforward.com/api/v1/accounts/e2RPphY9_-bdYZ1PBLMmjg==/acquire
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| パス | 必須 | `id` | [口座](https://github.com/moneyforward/api-doc/blob/master/accounts_index.md)の `hashed_id` |
 
-### response-body
+### 例
 
-nothing
+```
+POST https://moneyforward.com/api/v1/accounts/e2RPphY9_-bdYZ1PBLMmjg==/acquire
+```
+
+## 応答の本文
+
+なし
 

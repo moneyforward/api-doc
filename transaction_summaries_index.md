@@ -1,49 +1,58 @@
-# GET /api/v1/derived/transaction_summaries
+# リクエスト日を含み、日曜始まりの週または月を単位とする期間の、入出金の大分類毎の収支を得る
 
-指定された過去から現在までの期間のカテゴリ毎の収支を取得します。期間は週または月の倍数で指定します。
+## 要求
 
-## Resource URL
+### エンドポイント
 
-https://moneyforward.com/api/v1/derived/transaction_summaries
+```
+GET https://moneyforward.com/api/v1/derived/transaction_summaries
+```
 
-## Parameters
+### パラメーター
 
-Name | Description
------ | -----
-period <br> *optional* | 期間を指定する単位。`week` または `month` 。デフォルト: `month`。
-past <br> *optional* | 上記単位で計った期間の長さ。 デフォルト: `0`。
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| クエリー | 随意; デフォルト: `month` | `period` | 期間を指定する単位; `week`: 日曜始まりの週, `month`: 月 |
+| クエリー | 随意; デフォルト: `0` | `past` | 上記単位で計った期間の長さ |
 
-## Example
+### 例
 
-今月のカテゴリ毎の収支データを取得
+```
+GET https://moneyforward.com/api/v1/derived/transaction_summaries?past=0&period=month
+```
 
-> **GET** *https://moneyforward.com/api/v1/derived/transaction_summaries?past=0&period=month*
+## 応答の本文
 
-    {
-      "transaction_summaries" : {
-        "from_date" : "2016-10-01",
-        "to_date" : "2016-10-31",
-        "income" : {
-          "amount" : 2000,
-          "currency" : "JPY"
-        },
-        "expense" : {
-          "amount" : 2980,
-          "currency" : "JPY"
-        },
-        "category_summaries" : [
-          {
-            "large_category_id" : 1,
-            "name" : "収入",
-            "amount" : 1000,
-            "currency" : "JPY"
-          },
-          {
-            "large_category_id" : 3,
-            "name" : "現金・カード",
-            "amount" : 1980,
-            "currency" : "JPY"
-          }
-        ]
+### 例
+
+```
+{
+  "transaction_summaries" : {
+    "from_date" : "2016-10-01",
+    "to_date" : "2016-10-31",
+    "income" : {
+      "amount" : 2000,
+      "currency" : "JPY"
+    },
+    "expense" : {
+      "amount" : 2980,
+      "currency" : "JPY"
+    },
+    "category_summaries" : [
+      {
+        "large_category_id" : 1,
+        "name" : "収入",
+        "amount" : 1000,
+        "currency" : "JPY"
+      },
+      {
+        "large_category_id" : 3,
+        "name" : "現金・カード",
+        "amount" : 1980,
+        "currency" : "JPY"
       }
-    }
+    ]
+  }
+}
+```
+

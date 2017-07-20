@@ -1,15 +1,23 @@
-# POST /api/v1/accounts/acquire
-全金融機関のデータ再取得を行う
+# 全ての口座の情報をマネーフォワードに金融機関から再取得させる
 
-## Resrouce URL
-https://moneyforward.com/api/v1/accounts/acquire
+## 要求
 
-## Example
+### エンドポイント
 
-### request
+```
+POST https://moneyforward.com/api/v1/accounts/acquire
+```
 
-> **POST** https://moneyforward.com/api/v1/accounts/acquire
+### パラメーター
 
-### response-body
+なし
 
-nothing
+### 例
+
+```
+POST https://moneyforward.com/api/v1/accounts/acquire
+```
+
+## 応答の本文
+
+なし
