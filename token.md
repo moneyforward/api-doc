@@ -34,7 +34,7 @@ POST http://moneyforward.com/oauth/v2/token?client_id=ff97d597c2a98367461892a497
 | `token_type` | `bearer` |
 | `access_token` | アクセストークン; APIエンドポイントのアクセスに必要な秘密の文字列 |
 | `expires_in` | アクセストークンが有効な発行時からの秒数 |
-| `refresh_token` | アクセストークンの有効期限が切れたときに、再び[認可を受ける](authorize.md)手順を踏まずに[アクセストークンを再び得る](refresh.md)ために必要な秘密の文字列 |
+| `refresh_token` | アクセストークンの有効期限が切れたときに、再び[認可を受ける](authorize.md)手順を踏まずに[アクセストークンを再び得る](token_refresh.md)ために必要な秘密の文字列 |
 | `scope` | 認可された権限を空白でつないだもの |
 | `id_token` | 認可についての情報をJSON Web Signature (JWS) の Compact Serialization 形式でエンコードしたもの |
 

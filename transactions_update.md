@@ -25,8 +25,8 @@ PUT https://moneyforward.com/api/v1/transactions/:id
 | 本文 | 必須 | `amount` | 金額; 入出金に関わらず0または正の整数 |
 | 本文 | 随意; デフォルト: 要求の日 | `updated_at` | 入出金日; `YY/MM/DD` 形式 |
 | 本文 | 随意; デフォルト: 空文字列 | `content` | 入出金内容を記す文字列; 最大65,535byte |
-| 本文 | 随意; デフォルト: `0` (未設定) | `large_category_id` | [入出金の大分類](categories_index.md)の `id` |
-| 本文 | 随意; デフォルト: `0` (未設定) | `middle_category_id` |[入出金の中分類](categories_index.md)の `id` |
+| 本文 | 随意; デフォルト: `0` (未設定) | `large_category_id` | [入出金の大分類](transaction_categories_index.md)の `id` |
+| 本文 | 随意; デフォルト: `0` (未設定) | `middle_category_id` |[入出金の中分類](transaction_categories_index.md)の `id` |
 
 ### 例
 

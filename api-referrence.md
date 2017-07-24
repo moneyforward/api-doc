@@ -62,11 +62,11 @@
 
 API の使用時には、始めに認可を得、アクセストークンを得るという手順が必要です。APIへのアクセスにはアクセストークンが必要です。アクセストークンは発行から一定時間が過ぎると使えなくなります。一度アクセストークンの発行を浮け、その有効期限が切れたときは、再び認可を受ける手順を踏まずにアクセストークンを再び得ることができます。
 
-|                                        |メソッド       |URI             |
-|----------------------------------------|---------------|----------------|
-|[認可を得る](authorize.md)              |GET または POST|/oauth/authorize|
-|[アクセストークンを得る](token.md)      |POST           |/oauth/v2/token |
-|[アクセストークンを再び得る](refresh.md)|POST           |/oauth/v2/token |
+|                                              |メソッド       |URI             |
+|----------------------------------------------|---------------|----------------|
+|[認可を得る](authorize.md)                    |GET または POST|/oauth/authorize|
+|[アクセストークンを得る](token.md)            |POST           |/oauth/v2/token |
+|[アクセストークンを再び得る](token_refresh.md)|POST           |/oauth/v2/token |
 
 ## マネーフォワード API を使って出来ること
 
@@ -106,7 +106,7 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 
 |                                                                                                                        |メソッド        |URI                                  |必要な権限(スコープ) |
 |------------------------------------------------------------------------------------------------------------------------|----------------|-------------------------------------|---------------------|
-|[入出金の全ての大分類(及びその中のユーザー作成の中分類)を得る](categories_index.md)                                     |GET             |/api/v1/transactions/categories      |`transactions`       |
+|[入出金の全ての大分類(及びその中のユーザー作成の中分類)を得る](transaction_categories_index.md)                         |GET             |/api/v1/transactions/categories      |`transactions`       |
 |[入出金項目を登録する](transactions_create.md)                                                                          |POST            |/api/v1/transactions                 |`manage_transactions`|
 |[特定の入出金項目の情報を書き換える](transactions_update.md)                                                            |PATCH または PUT|/api/v1/transactions/:id             |`manage_transactions`|
 |[全ての入出金記録を得る](transactions_index.md)                                                                         |GET             |/api/v1/transactions                 |`transactions`       |
