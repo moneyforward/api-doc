@@ -12,13 +12,14 @@ GET https://moneyforward.com/api/v1/user_asset_histories
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 | クエリー | 随意; デフォルト: , 複数個使用可 | `account_ids[]` | 口座の `hashed_id` |
 | クエリー | 随意; デフォルト: , 複数個使用可 | `original_user_asset_ids[]` | 資産の `hashed_id` |
 | クエリー | 随意; デフォルト: , 複数個使用可 | `asset_class_ids[]` | 資産の大分類の `id` |
 | クエリー | 随意; デフォルト: , 複数個使用可 | `asset_subclass_ids[]` | 資産の中分類の `id` |
 | クエリー | 随意; デフォルト: , 複数個使用可 | `target_dates[]` | 期準日; ISO 8601 拡張形式; `from_date`, `to_date` より優先 |
-| クエリー | 随意; デフォルト: リクエスト日の前日 | `from_date` | 最古基準日; ISO 8601 拡張形式 |
-| クエリー | 随意; デフォルト: リクエスト日の前日 | `to_date` | 最新基準日; ISO 8601 拡張形式 |
+| クエリー | 随意; デフォルト: 要求の日の前日 | `from_date` | 最古基準日; ISO 8601 拡張形式 |
+| クエリー | 随意; デフォルト: 要求の日の前日 | `to_date` | 最新基準日; ISO 8601 拡張形式 |
 | クエリー | 随意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 随意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数; 最大: `500` |
 
@@ -26,6 +27,7 @@ GET https://moneyforward.com/api/v1/user_asset_histories
  
 ```
 GET https://moneyforward.com/api/v1/user_asset_histories?account_ids[]=LlPqfqeeCZavwPBLmUy6xg==&from_date=2014-5-22&to_date=2014-05-23
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文

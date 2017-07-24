@@ -12,12 +12,13 @@ GET https://moneyforward.com/api/v1/transactions
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](https://github.com/moneyforward/api-doc/blob/master/accounts_index.md)の `hashed_id` |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](https://github.com/moneyforward/api-doc/blob/master/accounts_index.md)の `hashed_id` |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `large_category_ids[]` | [入出金の大分類](https://github.com/moneyforward/api-doc/blob/master/categories_index.md)の `id` |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `middle_category_ids[]` | [入出金の中分類](https://github.com/moneyforward/api-doc/blob/master/categories_index.md)の `id` |
-| クエリー | 随意; デフォルト: リクエスト日の1か月前の日 | `from_date` | 最古の記帳日または日時; ISO 8601 拡張形式 |
-| クエリー | 随意; デフォルト: リクエスト日 | `to_date` | 最新の記帳日または日時; ISO 8601 拡張形式 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
+| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](accounts_index.md)の `hashed_id` |
+| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `large_category_ids[]` | [入出金の大分類](categories_index.md)の `id` |
+| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `middle_category_ids[]` | [入出金の中分類](categories_index.md)の `id` |
+| クエリー | 随意; デフォルト: 要求の日の1か月前の日 | `from_date` | 最古の記帳日または日時; ISO 8601 拡張形式 |
+| クエリー | 随意; デフォルト: 要求の日 | `to_date` | 最新の記帳日または日時; ISO 8601 拡張形式 |
 | クエリー | 随意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 随意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数, 最大: `500` |
 
@@ -25,6 +26,7 @@ GET https://moneyforward.com/api/v1/transactions
 
 ```
 GET https://moneyforward.com/api/v1/transactions?sub_account_ids[]=3aJadZHjTJDdj-J0V2Oawg&sub_account_ids[]=dyJaw7FlOG41c1C-LKndFA==&middle_category_ids[]=32
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文

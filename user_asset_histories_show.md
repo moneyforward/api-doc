@@ -13,12 +13,14 @@ GET https://moneyforward.com/api/v1/user_asset_histories/:id
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | パス | 必須 | `id` | 資産の履歴の `hashed_id` |
-| クエリー | 随意; デフォルト: リクエスト日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| クエリー | 随意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
  
 ### 例
 
 ```
 GET https://moneyforward.com/api/v1/user_asset_histories/vpxDzM6STgFT4Br7pFTzVQ==
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文

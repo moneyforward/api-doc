@@ -12,8 +12,9 @@ GET https://moneyforward.com/api/v1/services
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 | クエリー | 随意; デフォルト: なし | `search_keyword` | このキーを元に金融機関名 (漢字もしくは読みがな) で検索する |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](https://github.com/moneyforward/api-doc/blob/master/service_categories_index.md)の `id` |
+| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](service_categories_index.md)の `id` |
 | クエリー | 随意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 随意; デフォルト: `200` | `limit` | 1ページ当たりの最大表示件数; 最大: `2000` |
 
@@ -21,6 +22,7 @@ GET https://moneyforward.com/api/v1/services
 
 ```
 GET https://moneyforward.com/api/v1/services?search_keyword=ミツビシ&service_category_ids[]=1&service_category_ids[]=2&limit=20
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文

@@ -12,7 +12,8 @@ GET https://moneyforward.com/api/v1/user_asset_summaries
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| クエリー | 随意; デフォルト: リクエスト日の前日 | `previous_date` | 前の営業日 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| クエリー | 随意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日 |
 | クエリー | 随意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | 口座の `hashed_id` |
 | クエリー | 随意; デフォルト: 全て; 複数個使用可 | `asset_class_ids[]` | 資産の大分類の `id` |
 | クエリー | 随意; デフォルト: 全て; 複数個使用可 | `asset_subclass_ids[]` | 資産の中分類の `id` |
@@ -24,6 +25,7 @@ GET https://moneyforward.com/api/v1/user_asset_summaries
 
 ```
 GET https://moneyforward.com/api/v1/user_asset_summaries?account_ids[]=LlPqfqeeCZavwPBLmUy6xg==&asset_subclass_ids[]=39
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文

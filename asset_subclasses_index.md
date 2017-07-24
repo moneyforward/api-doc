@@ -10,12 +10,15 @@ GET https://moneyforward.com/api/v1/asset_subclasses
 
 ### パラメーター
 
-なし
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 
 ### 例
 
 ```
 GET https://moneyforward.com/api/v1/asset_subclasses
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文
@@ -24,7 +27,7 @@ GET https://moneyforward.com/api/v1/asset_subclasses
 
 | 名称 | 内容 |
 | ---- | --- |
-| `[i][asset_subclass][liquid]` | 資産の流動性; 0から100までの数値 |
+| `i[asset_subclass][liquid]` | 資産の流動性; 0から100までの数値 |
 
 ### 例
 

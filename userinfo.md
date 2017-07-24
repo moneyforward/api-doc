@@ -1,4 +1,8 @@
-# ユーザーの認可情報を得る
+# ユーザーの電子メール認証情報を得る
+
+ユーザーが電子メールアドレスを使ってマネーフォワードに登録した後、マネーフォワードからそのアドレスに宛てて送ったリンク付きのメッセージにユーザーが応じることで、その電子メールアドレスが確かにそのユーザーのものであることをマネーフォワードは確認する。その確認が取れているかどうかという情報を得る。
+
+また、 (`openid` 権限に加えて) `email` 権限があり、かつアドレスの確認が取れているときに、その電子メールアドレスを得る。
 
 ## 要求
 
@@ -18,17 +22,31 @@ POST https://moneyforward.com/oauth/userinfo
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ``` |
-
-
-電子メールアドレス付き認可情報の取得|GET または POST|/oauth/userinfo |`openid email`        |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 
 ### 例
 
 ```
 GET https://moneyforward.com/oauth/userinfo
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文
 
 ### パラメーター
+
+| 名称 | 内容 |
+| ---- | --- |
+| `sub` | Subject; ユーザーに固有な文字列 |
+| `email_verified` | `true`: 電子メールアドレスがユーザーのものと確認できた, `false`: できていない |
+| `email` | 確認の取れた電子メールアドレス; (`openid` 権限に加えて) `email` 権限があり、かつ上の `email_verified` の値が `true` のときにのみ与えられる |
+
+### 例
+
+```
+{
+  "sub": "3ef59dcfa8d002edb2963cb6e10b0449f1a32e2bf0159216c046bb78763d0c9d",
+  "email_verified": true,
+  "email": "hugahuga.hogehoge@foobar.com"
+}
+```

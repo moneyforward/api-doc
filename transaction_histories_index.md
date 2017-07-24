@@ -1,4 +1,4 @@
-# リクエスト日を含む期間の、日曜始まりの週または月ごとの全ての入出金を得る
+# 要求の日を含む期間の、日曜始まりの週または月ごとの全ての入出金を得る
 
 ## 要求
 
@@ -12,6 +12,7 @@ GET https://moneyforward.com/api/v1/derived/transaction_histories
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 | クエリー | 随意; デフォルト: `month` | `period` | 期間を指定する単位; `week`: 日曜始まりの週, `month`: 月 |
 | クエリー | 随意; デフォルト: `0` | `past` | 上記単位で計った期間の長さ |
 
@@ -19,6 +20,7 @@ GET https://moneyforward.com/api/v1/derived/transaction_histories
 
 ```
 GET https://moneyforward.com/api/v1/derived/transaction_histories?past=3&period=week
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 ```
 
 ## 応答の本文
