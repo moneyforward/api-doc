@@ -56,6 +56,6 @@ GET https://moneyforward.com/oauth/authorize?response_type=code&client_id=710c7d
 ```
 {
   "code": e885b973e64797bcf3342529d57cd2adca97a11f787ef9736ea92d8061e5aa59,
-  "state"; NzHDXGuMme5c4GkCEd7TXUYebK0
+  "state": NzHDXGuMme5c4GkCEd7TXUYebK0
 }
 ```
