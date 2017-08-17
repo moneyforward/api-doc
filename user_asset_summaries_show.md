@@ -14,7 +14,7 @@ GET https://moneyforward.com/api/v1/user_asset_summaries/:id
 | ---- | ---- | ---- | --- |
 | パス | 必須 | `id` | 資産合計項目の `hashed_id` |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 随意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
+| クエリー | 任意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
  
 ### 例
 

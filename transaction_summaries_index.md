@@ -13,8 +13,8 @@ GET https://moneyforward.com/api/v1/derived/transaction_summaries
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 随意; デフォルト: `month` | `period` | 期間を指定する単位; `week`: 日曜始まりの週, `month`: 月 |
-| クエリー | 随意; デフォルト: `0` | `past` | 上記単位で計った期間の長さ |
+| クエリー | 任意; デフォルト: `month` | `period` | 期間を指定する単位; `week`: 日曜始まりの週, `month`: 月 |
+| クエリー | 任意; デフォルト: `0` | `past` | 上記単位で計った期間の長さ |
 
 ### 例
 

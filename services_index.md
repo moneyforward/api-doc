@@ -13,10 +13,10 @@ GET https://moneyforward.com/api/v1/services
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 随意; デフォルト: なし | `search_keyword` | このキーを元に金融機関名 (漢字もしくは読みがな) で検索する |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](service_categories_index.md)の `id` |
-| クエリー | 随意; デフォルト: `1` | `page` | ページ番号 |
-| クエリー | 随意; デフォルト: `200` | `limit` | 1ページ当たりの最大表示件数; 最大: `2000` |
+| クエリー | 任意; デフォルト: なし | `search_keyword` | このキーを元に金融機関名 (漢字もしくは読みがな) で検索する |
+| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](service_categories_index.md)の `id` |
+| クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
+| クエリー | 任意; デフォルト: `200` | `limit` | 1ページ当たりの最大表示件数; 最大: `2000` |
 
 ### 例
 

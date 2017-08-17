@@ -13,12 +13,12 @@ GET https://moneyforward.com/api/v1/user_asset_class_histories
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 随意; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `asset_class_ids[]` | [資産の大分類](asset_classes_index.md)の `id` |
-| クエリー | 随意; デフォルト: 全て; 複数個使用可 | `asset_subclass_ids[]` | [資産の中分類](asset_subclasses_index.md)の `id` |
-| クエリー | 随意; デフォルト: なし; 複数個使用可 | `target_dates[]` | 基準日; `from_date`, `to_date` より優先 |
-| クエリー | 随意; デフォルト: 要求の日の前日 | `from_date` | 最古の基準日; ISO 8601 拡張形式 |
-| クエリー | 随意; デフォルト: 要求の日の前日 | `to_date` | 最新の基準日; ISO 8601 拡張形式 |
+| クエリー | 任意; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
+| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_class_ids[]` | [資産の大分類](asset_classes_index.md)の `id` |
+| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_subclass_ids[]` | [資産の中分類](asset_subclasses_index.md)の `id` |
+| クエリー | 任意; デフォルト: なし; 複数個使用可 | `target_dates[]` | 基準日; `from_date`, `to_date` より優先 |
+| クエリー | 任意; デフォルト: 要求の日の前日 | `from_date` | 最古の基準日; ISO 8601 拡張形式 |
+| クエリー | 任意; デフォルト: 要求の日の前日 | `to_date` | 最新の基準日; ISO 8601 拡張形式 |
 
 ### 例
 
