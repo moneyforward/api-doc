@@ -47,6 +47,6 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 {
   "sub": "3ef59dcfa8d002edb2963cb6e10b0449f1a32e2bf0159216c046bb78763d0c9d",
   "email_verified": true,
-  "email": "hugahuga.hogehoge@foobar.com"
+  "email": "hugahuga.hogehoge@example.com"
 }
 ```
