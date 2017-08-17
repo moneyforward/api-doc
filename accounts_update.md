@@ -41,4 +41,4 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ## 応答の本文
 
-https://github.com/moneyforward/api-doc/blob/master/accounts_show.md と同じ
+[GET https://moneyforward.com/api/v1/accounts/:id](accounts_show.md) と同じ

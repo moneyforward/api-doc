@@ -31,7 +31,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-https://github.com/moneyforward/api-doc/blob/master/user_assets_show.md と同じ内容が `user_assets[i]` として配列に入っている。
+[GET https://moneyforward.com/api/v1/user_assets/:id](user_assets_show.md) と同じ内容が `user_assets[i]` として配列に入っている。
 
 ### 例
 

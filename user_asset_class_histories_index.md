@@ -31,7 +31,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-https://github.com/moneyforward/api-doc/blob/master/user_asset_classes_index.md の内容から一部を欠き、 `user_asset_class` キーを `user_asset_class_history` キーに置き換えたものが配列に入っている。
+[GET https://moneyforward.com/api/v1/user_asset_classes](user_asset_classes_index.md) の内容から一部を欠き、 `user_asset_class` キーを `user_asset_class_history` キーに置き換えたものが配列に入っている。
  
 ### 例
 
