@@ -10,9 +10,9 @@ POST https://moneyforward.com/api/v1/accounts/acquire
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
 
 ### 例
 

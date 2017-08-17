@@ -10,13 +10,13 @@ GET https://moneyforward.com/api/v1/user_asset_classes
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 任意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_class_ids[]` | [資産の大分類](asset_classes_index.md)の `id` |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_subclass_ids[]` | [資産の中分類](asset_subclasses_index.md)の `id` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+クエリー | 任意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id`
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_class_ids[]` | [資産の大分類](asset_classes_index.md)の `id`
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `asset_subclass_ids[]` | [資産の中分類](asset_subclasses_index.md)の `id`
 
 ### 例
 ```
@@ -28,18 +28,18 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `i[user_asset_class][value]` | 評価額 |
-| `i[user_asset_class][profit]` | 損益 |
-| `i[user_asset_class][rated_value]` | 円換算評価額 |
-| `i[user_asset_class][rated_profit]` | 円換算損益 |
-| `i[user_asset_class][updated_at]` | 基準日; ISO 8601 拡張形式 |
-| `i[previous_value_set][value]` | 前の営業日の評価額 |
-| `i[previous_value_set][profit]` | 前の営業日の損益 |
-| `i[previous_value_set][rated_value]` | 前の営業日の円換算評価額 |
-| `i[previous_value_set][rated_profit]` | 前の営業日の円換算損益 |
-| `i[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式 |
+名称 | 内容
+---- | ---
+`i[user_asset_class][value]` | 評価額
+`i[user_asset_class][profit]` | 損益
+`i[user_asset_class][rated_value]` | 円換算評価額
+`i[user_asset_class][rated_profit]` | 円換算損益
+`i[user_asset_class][updated_at]` | 基準日; ISO 8601 拡張形式
+`i[previous_value_set][value]` | 前の営業日の評価額
+`i[previous_value_set][profit]` | 前の営業日の損益
+`i[previous_value_set][rated_value]` | 前の営業日の円換算評価額
+`i[previous_value_set][rated_profit]` | 前の営業日の円換算損益
+`i[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式
  
 ### 例
 

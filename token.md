@@ -11,13 +11,13 @@ POST /oauth/v2/token
 ```
 
 ### パラメーター
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| クエリー | 必須 | `grant_type` | `authorization_code` |
-| クエリー | 必須 | `client_id` | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェア固有の文字列 |
-| クエリー | 必須 | `redirect_uri` | クライアントソフトウェアの登録時に指定された、クライアントソフトウェア上のURL |
-| クエリー | 必須 | `client_secret` | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェアの秘密の文字列 |
-| クエリー | 必須 | `code` | [認可を得た](authorize.md)時に応答の本文に含まれていた `code` の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+クエリー | 必須 | `grant_type` | `authorization_code`
+クエリー | 必須 | `client_id` | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェア固有の文字列
+クエリー | 必須 | `redirect_uri` | クライアントソフトウェアの登録時に指定された、クライアントソフトウェア上のURL
+クエリー | 必須 | `client_secret` | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェアの秘密の文字列
+クエリー | 必須 | `code` | [認可を得た](authorize.md)時に応答の本文に含まれていた `code` の値
 
 ### 例
 
@@ -29,25 +29,25 @@ POST http://moneyforward.com/oauth/v2/token?client_id=ff97d597c2a98367461892a497
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `token_type` | `bearer` |
-| `access_token` | アクセストークン; APIエンドポイントのアクセスに必要な秘密の文字列 |
-| `expires_in` | アクセストークンが有効な発行時からの秒数 |
-| `refresh_token` | アクセストークンの有効期限が切れたときに、再び[認可を受ける](authorize.md)手順を踏まずに[アクセストークンを再び得る](token_refresh.md)ために必要な秘密の文字列 |
-| `scope` | 認可された権限を空白でつないだもの |
-| `id_token` | 認可についての情報をJSON Web Signature (JWS) の Compact Serialization 形式でエンコードしたもの |
+名称 | 内容
+---- | ---
+`token_type` | `bearer`
+`access_token` | アクセストークン; APIエンドポイントのアクセスに必要な秘密の文字列
+`expires_in` | アクセストークンが有効な発行時からの秒数
+`refresh_token` | アクセストークンの有効期限が切れたときに、再び[認可を受ける](authorize.md)手順を踏まずに[アクセストークンを再び得る](token_refresh.md)ために必要な秘密の文字列
+`scope` | 認可された権限を空白でつないだもの
+`id_token` | 認可についての情報をJSON Web Signature (JWS) の Compact Serialization 形式でエンコードしたもの
 
 `id_token` の値のペイロード部分をデコードすることによって、さらに次のようなパラメーターを得ることが出来る。これらはクレームと呼ばれる。時間は、Unixエポックを起点として、秒単位で表されている。
 
-| 名称 | 内容 |
-| ---- | --- |
-| `iss` | Issuer; アクセストークンの発行元を表す文字列やURL; `https://moneyforward.com` |
-| `sub` | Subject; ユーザーに固有な文字列 |
-| `aud` | Audience; 要求の `cliend_id` の値 |
-| `exp` | Expiration time; アクセストークンの有効期限 |
-| `iat` | Issued at; `id_token` を発行した時間 |
-| `auth_time` | ユーザーを認証した時間 |
+名称 | 内容
+---- | ---
+`iss` | Issuer; アクセストークンの発行元を表す文字列やURL; `https://moneyforward.com`
+`sub` | Subject; ユーザーに固有な文字列
+`aud` | Audience; 要求の `cliend_id` の値
+`exp` | Expiration time; アクセストークンの有効期限
+`iat` | Issued at; `id_token` を発行した時間
+`auth_time` | ユーザーを認証した時間
 
 ### 例
 
