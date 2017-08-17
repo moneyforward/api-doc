@@ -1,15 +1,26 @@
-# POST /api/v1/accounts/acquire
-全金融機関のデータ再取得を行う
+# 全ての口座の情報をマネーフォワードに金融機関から再取得させる
 
-## Resrouce URL
-https://moneyforward.com/api/v1/accounts/acquire
+## 要求
 
-## Example
+### エンドポイント
 
-### request
+```
+POST https://moneyforward.com/api/v1/accounts/acquire
+```
 
-> **POST** https://moneyforward.com/api/v1/accounts/acquire
+### パラメーター
 
-### response-body
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
 
-nothing
+### 例
+
+```
+POST https://moneyforward.com/api/v1/accounts/acquire
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
+```
+
+## 応答の本文
+
+なし

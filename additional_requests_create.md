@@ -1,36 +1,45 @@
-# POST /api/v1/additonal_requests
-追加の質問の作成を行う
+# 特定の口座への代替のログイン方法で必要な追加の質問の質問部分を得る
 
-## Resrouce URL
-https://moneyforward.com/api/v1/additional_requests
+## 要求
 
-## Parameters
-name | Description 
------------|------------------------
-additional_request[:account_id] <br> *required* | 追加の質問を作成する金融機関のID *hashed*
+### エンドポイント
 
-## Example
+```
+POST https://moneyforward.com/api/v1/additonal_requests
+```
 
-### request
+### パラメーター
 
-> **POST* *https://moneyforward.com/api/v1/additional_requests
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| 本文 | 必須 | `additional_request[account_id]` | [口座](accounts_index.md)の `hashed_id` |
 
-### request-body
+### 例
 
-    {
-      "additional_request": {
-        "account_id": "84dG3OLcZt_gLm66DESKzw=="
-      }
+```
+POST https://moneyforward.com/api/v1/additional_requests
+X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
+
+{
+  "additional_request": {
+    "account_id": "84dG3OLcZt_gLm66DESKzw=="
+  }
+}
+```
+
+## 応答の本文
+
+### 例
+
+```
+[
+  {
+    "additional_request": {
+      "hashed_id": "ZUwr8sW8oXjm5uThdVSZPw==",
+      "message": "合言葉／秘密の質問 への記入が必要です。",
+      "request_data": "子供の頃の一番の親友の名前は何ですか"
     }
-
-### rsponse-body
-
-    [
-      {
-        "additional_request": {
-          "hashed_id": "ZUwr8sW8oXjm5uThdVSZPw==",
-          "message": "合言葉／秘密の質問 への記入が必要です。",
-          "request_data": "子供の頃の一番の親友の名前は何ですか"
-        }
-      }
-    ]
+  }
+]
+```
