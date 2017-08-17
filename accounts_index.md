@@ -10,12 +10,12 @@ GET https://moneyforward.com/api/v1/accounts
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の種別](service_categories_index.md)の `id` |
-| クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
-| クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数; 最大: `10000` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の種別](service_categories_index.md)の `id`
+クエリー | 任意; デフォルト: `1` | `page` | ページ番号
+クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数; 最大: `10000`
 
 ### 例
 
@@ -28,17 +28,17 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `accounts[i][account][account_uid_hidden]` | 口座のidの一部を隠したもの (最大3文字が表示される) |
-| `accounts[i][account][asset_sum]` | 資産の合計 |
-| `accounts[i][account][disp_name]` | ユーザーが設定した口座の識別名 (未設定なら `null`) |
-| `accounts[i][account][memo]` | ユーザーが設定したメモ |
-| `accounts[i][account][message]` | 金融機関からユーザーへの通知 |
-| `accounts[i][account][msg_flag]` | `true`: `message` を表示する, `false` (デフォルト): `message` を表示しない |
-| `accounts[i][account][status]` | 金融機関からの情報の取得状況, `0`: 取得済み, `1`: 取得中、`2`: 取得エラー, `3`: 取得停止中 |
-| `accounts[i][account][sub_accounts][j][sub_name]` | 金融機関の支店名 |
-| `accounts[i][account][sub_accounts][j][sub_number]` | 口座番号 |
+名称 | 内容
+---- | ---
+`accounts[i][account][account_uid_hidden]` | 口座のidの一部を隠したもの (最大3文字が表示される)
+`accounts[i][account][asset_sum]` | 資産の合計
+`accounts[i][account][disp_name]` | ユーザーが設定した口座の識別名 (未設定なら `null`)
+`accounts[i][account][memo]` | ユーザーが設定したメモ
+`accounts[i][account][message]` | 金融機関からユーザーへの通知
+`accounts[i][account][msg_flag]` | `true`: `message` を表示する, `false` (デフォルト): `message` を表示しない
+`accounts[i][account][status]` | 金融機関からの情報の取得状況, `0`: 取得済み, `1`: 取得中、`2`: 取得エラー, `3`: 取得停止中
+`accounts[i][account][sub_accounts][j][sub_name]` | 金融機関の支店名
+`accounts[i][account][sub_accounts][j][sub_number]` | 口座番号
  
 ### 例
 

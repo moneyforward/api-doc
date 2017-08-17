@@ -20,9 +20,9 @@ POST https://moneyforward.com/oauth/userinfo
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
 
 ### 例
 
@@ -35,11 +35,11 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `sub` | Subject; ユーザーに固有な文字列 |
-| `email_verified` | `true`: 電子メールアドレスがユーザーのものと確認できた, `false`: できていない |
-| `email` | 確認の取れた電子メールアドレス; (`openid` 権限に加えて) `email` 権限があり、かつ上の `email_verified` の値が `true` のときにのみ与えられる |
+名称 | 内容
+---- | ---
+`sub` | Subject; ユーザーに固有な文字列
+`email_verified` | `true`: 電子メールアドレスがユーザーのものと確認できた, `false`: できていない
+`email` | 確認の取れた電子メールアドレス; (`openid` 権限に加えて) `email` 権限があり、かつ上の `email_verified` の値が `true` のときにのみ与えられる
 
 ### 例
 
