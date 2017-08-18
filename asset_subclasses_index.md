@@ -1,4 +1,4 @@
-# 資産の全ての中分類を得る
+# 資産の全ての中分類を閲覧する
 
 ## 要求
 
@@ -10,9 +10,9 @@ GET https://moneyforward.com/api/v1/asset_subclasses
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
 
 ### 例
 
@@ -25,9 +25,9 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `i[asset_subclass][liquid]` | 資産の流動性; 0から100までの数値 |
+名称 | 内容
+---- | ---
+`i[asset_subclass][liquid]` | 資産の流動性; 0から100までの数値
 
 ### 例
 

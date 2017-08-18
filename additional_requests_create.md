@@ -1,4 +1,4 @@
-# 特定の口座への代替のログイン方法で必要な追加の質問の質問部分を得る
+# 特定の口座のログインに必要な追加の入力項目を登録する
 
 ## 要求
 
@@ -10,10 +10,10 @@ POST https://moneyforward.com/api/v1/additonal_requests
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| 本文 | 必須 | `additional_request[account_id]` | [口座](accounts_index.md)の `hashed_id` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+本文 | 必須 | `additional_request[account_id]` | [口座](accounts_index.md)の `hashed_id`
 
 ### 例
 

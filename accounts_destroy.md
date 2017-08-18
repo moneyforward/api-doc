@@ -1,4 +1,4 @@
-# 特定の口座を解除する
+# 特定の口座連携を削除する
 
 ## 要求
 
@@ -10,10 +10,10 @@ DELETE https://moneyforward.com/api/v1/accounts/:id
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| パス | 必須 | `id` | [金融機関](accounts_index.md)の `hashed_id` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+パス | 必須 | `id` | [金融機関](accounts_index.md)の `hashed_id`
 
 ### 例
 

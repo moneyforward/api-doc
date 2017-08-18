@@ -1,4 +1,4 @@
-# マネーフォワードが金融機関から情報を取得しようとする際に生じうる全てのエラーの種類を得る
+# マネーフォワードが金融機関から情報を取得しようとする際に生じうる全てのエラーの種類を閲覧する
 
 ## 要求
 
@@ -10,9 +10,9 @@ GET https://moneyforward.com/api/v1/aggregation_errors
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
 
 ### 例
 

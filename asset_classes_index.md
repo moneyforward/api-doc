@@ -1,4 +1,4 @@
-# 資産の全ての大分類(及びその中の中分類)を得る
+# 資産の全ての大分類(及びその中の中分類)を閲覧する
 
 ## 要求
 
@@ -10,9 +10,9 @@ GET https://moneyforward.com/api/v1/asset_classes
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
 
 ### 例
 

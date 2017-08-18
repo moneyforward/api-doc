@@ -1,4 +1,4 @@
-# 全ての入出金記録を得る
+# 全ての入出金記録を閲覧する
 
 ## 要求
 
@@ -10,17 +10,17 @@ GET https://moneyforward.com/api/v1/transactions
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](accounts_index.md)の `hashed_id` |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `large_category_ids[]` | [入出金の大分類](transaction_categories_index.md)の `id` |
-| クエリー | 任意; デフォルト: 全て; 複数個使用可 | `middle_category_ids[]` | [入出金の中分類](transaction_categories_index.md)の `id` |
-| クエリー | 任意; デフォルト: 要求の日の1か月前の日 | `from_date` | 最古の記帳日または日時; ISO 8601 拡張形式 |
-| クエリー | 任意; デフォルト: 要求の日 | `to_date` | 最新の記帳日または日時; ISO 8601 拡張形式 |
-| クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
-| クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数, 最大: `500` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id`
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](accounts_index.md)の `hashed_id`
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `large_category_ids[]` | [入出金の大分類](transaction_categories_index.md)の `id`
+クエリー | 任意; デフォルト: 全て; 複数個使用可 | `middle_category_ids[]` | [入出金の中分類](transaction_categories_index.md)の `id`
+クエリー | 任意; デフォルト: 要求の日の1か月前の日 | `from_date` | 最古の記帳日または日時; ISO 8601 拡張形式
+クエリー | 任意; デフォルト: 要求の日 | `to_date` | 最新の記帳日または日時; ISO 8601 拡張形式
+クエリー | 任意; デフォルト: `1` | `page` | ページ番号
+クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数, 最大: `500`
 
 ### 例
 
@@ -33,22 +33,22 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-| 名称 | 内容 |
-| ---- | --- |
-| `transactions[i][transaction][hashed_id]` | 入出金記録の `hashed_id` |
-| `transactions[i][transaction][content]` | ユーザーが書き込める入出金の内容を表す文字列 |
-| `transactions[i][transaction][is_income]` | `true`: 収入, `false`: 支出 |
-| `transactions[i][transaction][is_transfer]` | `true`: 振替, `false`: 振替でない |
-| `transactions[i][transaction][currency]` | 通貨; デフォルト: `JPY` (日本円) |
-| `transactions[i][transaction][amount]` | 金額; 正: 入金, 負: 出金 |
-| `transactions[i][transaction][jpyrate]` | 日本円に対する為替レート |
-| `transactions[i][transaction][large_category_id]` | 大項目の `id` |
-| `transactions[i][transaction][middle_category_id]` | 中項目の `id` |
-| `transactions[i][transaction][hashed_partner_act_id]` | 振替を構成する反対側の入出金記録の `hashed_id` |
-| `transactions[i][transaction][hashed_account_id]` | 入出金元の口座の `hashed_id` |
-| `transactions[i][transaction][hashed_sub_account_id]` | 入出金元のサブアカウントの `hashed_id` |
-| `transactions[i][transaction][updated_at]` | 入出金が記帳された日時; ISO 8601 拡張形式 |
-| `transactions[i][transaction][created_at]` | マネーフォワードが情報を取得した日時; ISO 8601 拡張形式 |
+名称 | 内容
+---- | ---
+`transactions[i][transaction][hashed_id]` | 入出金記録の `hashed_id`
+`transactions[i][transaction][content]` | ユーザーが書き込める入出金の内容を表す文字列
+`transactions[i][transaction][is_income]` | `true`: 収入, `false`: 支出
+`transactions[i][transaction][is_transfer]` | `true`: 振替, `false`: 振替でない
+`transactions[i][transaction][currency]` | 通貨; デフォルト: `JPY` (日本円)
+`transactions[i][transaction][amount]` | 金額; 正: 入金, 負: 出金
+`transactions[i][transaction][jpyrate]` | 日本円に対する為替レート
+`transactions[i][transaction][large_category_id]` | 大項目の `id`
+`transactions[i][transaction][middle_category_id]` | 中項目の `id`
+`transactions[i][transaction][hashed_partner_act_id]` | 振替を構成する反対側の入出金記録の `hashed_id`
+`transactions[i][transaction][hashed_account_id]` | 入出金元の口座の `hashed_id`
+`transactions[i][transaction][hashed_sub_account_id]` | 入出金元のサブアカウントの `hashed_id`
+`transactions[i][transaction][updated_at]` | 入出金が記帳された日時; ISO 8601 拡張形式
+`transactions[i][transaction][created_at]` | マネーフォワードが情報を取得した日時; ISO 8601 拡張形式
 
 ### 例
 
