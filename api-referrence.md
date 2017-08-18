@@ -77,6 +77,7 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 |[ユーザーの認可情報を得る](userinfo.md)            |GET または POST|/oauth/userinfo    |`openid` または `openid email`|
 |[ユーザーの情報を得る](user_show.md)               |GET            |/api/v1/user       |なし                          |
 |[ユーザーのSSOトークンを得る](sso_tokens_create.md)|POST           |/apoi/v1/sso_tokens|`sso_tokens`                  |
+|[ユーザーのデモグラフィック情報を閲覧する](profile_show.md)|GET           |/api/v1/profile|`profile`                  |
 [](ユーザーの情報を削除する DELETE /api/v1/user)
 
 ### 金融機関情報の取得
