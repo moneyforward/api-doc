@@ -51,6 +51,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 `user_asset[sub_accounts][sub_name]` | 支店名
 `user_asset[sub_accounts][sub_number]` | 口座番号
 
+### 例
+
 ```
 {
   "user_asset": {

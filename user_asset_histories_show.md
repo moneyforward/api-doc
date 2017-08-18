@@ -47,6 +47,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 `user_asset_history[previous_value_set][rated_profit]` | 前の営業日の円換算損益
 `user_asset_history[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式
 
+### 例
+
 ```
 {
   "user_asset_history": {

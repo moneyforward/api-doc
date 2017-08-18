@@ -36,6 +36,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 `user[premium?]` | マネーフォワード家計簿プレミアムサービス利用状況
 `user[only_api_user?]` | マネーフォワード家計簿をAPI経由でのみ利用しているか
 
+### 例
+
 ```
 {
   "user": {
