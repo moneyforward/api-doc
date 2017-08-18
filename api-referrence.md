@@ -72,11 +72,12 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 
 ### ユーザ情報の閲覧
 
-                                                   |メソッド       |URI                |必要な権限(スコープ)
----------------------------------------------------|---------------|-------------------|------------------------------
-[ユーザーの認可情報を閲覧する](userinfo.md)            |GET または POST|/oauth/userinfo   |`openid` または `openid email`
-[ユーザーの情報を閲覧する](user_show.md)               |GET            |/api/v1/user      |なし
-[ユーザーのSSOトークンを閲覧する](sso_tokens_create.md)|POST           |/api/v1/sso_tokens|`sso_tokens`
+                                                                |メソッド       |URI               |必要な権限(スコープ)
+----------------------------------------------------------------|---------------|------------------|------------------------------
+[ユーザーの認可情報を閲覧する](userinfo.md)                     |GET または POST|/oauth/userinfo   |`openid` または `openid email`
+[ユーザーのSSOトークンを登録する](sso_tokens_create.md)         |POST           |/api/v1/sso_tokens|`sso_tokens`
+[ユーザーのマネーフォワードへの登録状況を閲覧する](user_show.md)|GET            |/api/v1/user      |なし
+[ユーザーのデモグラフィック情報を閲覧する](profile_show.md)     |GET            |/api/v1/profile   |`profile`
 [//]: # ユーザーの情報を削除する|DELETE|/api/v1/user|
 
 ### 金融機関情報の閲覧
