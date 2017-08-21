@@ -10,11 +10,11 @@ GET https://moneyforward.com/api/v1/user_asset_summaries/:id
 
 ### パラメーター
 
-場所 | 随意性 | 名称 | 内容
----- | ---- | ---- | ---
-パス | 必須 | `id` | 資産合計項目の `hashed_id`
-ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
-クエリー | 任意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| パス | 必須 | `id` | 資産合計項目の `hashed_id` |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| クエリー | 任意; デフォルト: 要求の日の前日 | `previous_date` | 前の営業日; ISO 8601 拡張形式 |
  
 ### 例
 
@@ -27,17 +27,17 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-名称 | 内容
----- | ---
-`user_asset_summary[value]` | 評価額
-`user_asset_summary[profit]` | 損益
-`user_asset_summary[rated_value]` | 円換算評価額
-`user_asset_summary[rated_profit]` | 円換算損益
-`user_asset_summary[previous_value_set][value]` | 前の営業日の評価額
-`user_asset_summary[previous_value_set][profit]` | 前の営業日の損益
-`user_asset_summary[previous_value_set][rated_value]` | 前の営業日の円換算評価額
-`user_asset_summary[previous_value_set][rated_profit]` | 前の営業日の円換算損益
-`user_asset_summary[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式
+| 名称 | 内容 |
+| ---- | --- |
+| `user_asset_summary[value]` | 評価額 |
+| `user_asset_summary[profit]` | 損益 |
+| `user_asset_summary[rated_value]` | 円換算評価額 |
+| `user_asset_summary[rated_profit]` | 円換算損益 |
+| `user_asset_summary[previous_value_set][value]` | 前の営業日の評価額 |
+| `user_asset_summary[previous_value_set][profit]` | 前の営業日の損益 |
+| `user_asset_summary[previous_value_set][rated_value]` | 前の営業日の円換算評価額 |
+| `user_asset_summary[previous_value_set][rated_profit]` | 前の営業日の円換算損益 |
+| `user_asset_summary[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式 |
 
 ### 例
 
