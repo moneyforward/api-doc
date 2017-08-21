@@ -1,4 +1,4 @@
-# ユーザーの情報を得る
+# ユーザーのマネーフォワードへの登録状況を得る
 
 ## 要求
 
@@ -35,6 +35,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `user[mf_withdrew_at]` | マネーフォワード家計簿サービス退会日時; ISO 8601 拡張形式 |
 | `user[premium?]` | マネーフォワード家計簿プレミアムサービス利用状況 |
 | `user[only_api_user?]` | マネーフォワード家計簿をAPI経由でのみ利用しているか |
+
+### 例
 
 ```
 {

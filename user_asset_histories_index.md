@@ -36,6 +36,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 [GET https://moneyforward.com/api/v1/user_asset_histories/:id](user_asset_histories_show.md) の内容から一部を欠いたものが `user_asset_histories[i]` として配列に入っている。
 
+### 例
+
 ```
 {
   "limit": 100,

@@ -1,4 +1,4 @@
-# 認可を得る
+# ユーザーの認可を得る
 
 OAuth2 Authorization Code Flow による認証を行い、特定のAPIエンドポイントにアクセスする権限を取得する。
 
