@@ -10,10 +10,10 @@ GET https://moneyforward.com/api/v1/services/:id
 
 ### パラメーター
 
-場所 | 随意性 | 名称 | 内容
----- | ---- | ---- | ---
-ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
-パス| 必須 | `id` | [金融機関](services_index.md)の `id`
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| パス| 必須 | `id` | [金融機関](services_index.md)の `id` |
 
 ### 例
 
@@ -26,26 +26,26 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-名称 | 内容
----- | ---
-`service[id]` | 金融機関の `id`
-`service[service_type]` | 金融機関固有の記号
-`service[service_name]` | 金融機関の名前
-`service[yomigana]` | 金融機関の名前の読み仮名
-`service[category_name]` | 金融機関の分類
-`service[category_type]` | 金融機関の分類を表す固有の記号
-`service[description]` | 金融機関へのログインについての説明
-`service[login_url]` | 金融機関サイトへのログイン先
-`service[exclusive_service_forms]` | ログインに必要な全ての入力項目
-`service[exclusive_service_forms][i][id]` | 入力項目の `id`
-`service[exclusive_service_forms][i][disp_order]` | マネーフォワードサービスで表示される時の表示順
-`service[exclusive_service_forms][i][encrypt_flag]` | 暗号化対象項目か否か
-`service[exclusive_service_forms][i][input_type]` | `alphameric`: 数値, `password`: パスワード, `text`: 文字列, `checkbox`: チェックボックス, `radio`: ラジオボタン, `table`: 乱数表
-`service[exclusive_service_forms][i][format]` | 入力値を制約する正規表現; 空白制限なし; `input_type` が `radio` の場合は、全ての選択肢
-`service[exclusive_service_forms][i][name]` | 金融機関サイトへのログイン時に表示される文言
-`service[exclusive_service_forms][i][note]` | 入力内容の補足説明
-`service[exclusive_service_forms][i][service_form_type]` | 入力項目の識別子
-`service[exclusive_service_forms][i][unique_flag]` | 一意性が課されるか否か
+| 名称 | 内容 |
+| ---- | --- |
+| `service[id]` | 金融機関の `id` |
+| `service[service_type]` | 金融機関固有の記号 |
+| `service[service_name]` | 金融機関の名前 |
+| `service[yomigana]` | 金融機関の名前の読み仮名 |
+| `service[category_name]` | 金融機関の分類 |
+| `service[category_type]` | 金融機関の分類を表す固有の記号 |
+| `service[description]` | 金融機関へのログインについての説明 |
+| `service[login_url]` | 金融機関サイトへのログイン先 |
+| `service[exclusive_service_forms]` | ログインに必要な全ての入力項目 |
+| `service[exclusive_service_forms][i][id]` | 入力項目の `id` |
+| `service[exclusive_service_forms][i][disp_order]` | マネーフォワードサービスで表示される時の表示順 |
+| `service[exclusive_service_forms][i][encrypt_flag]` | 暗号化対象項目か否か |
+| `service[exclusive_service_forms][i][input_type]` | `alphameric`: 数値, `password`: パスワード, `text`: 文字列, `checkbox`: チェックボックス, `radio`: ラジオボタン, `table`: 乱数表 |
+| `service[exclusive_service_forms][i][format]` | 入力値を制約する正規表現; 空白制限なし; `input_type` が `radio` の場合は、全ての選択肢 |
+| `service[exclusive_service_forms][i][name]` | 金融機関サイトへのログイン時に表示される文言 |
+| `service[exclusive_service_forms][i][note]` | 入力内容の補足説明 |
+| `service[exclusive_service_forms][i][service_form_type]` | 入力項目の識別子 |
+| `service[exclusive_service_forms][i][unique_flag]` | 一意性が課されるか否か |
 
 ### 例
 
