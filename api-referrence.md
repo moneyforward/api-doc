@@ -112,7 +112,7 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 |[特定の入出金項目の情報を書き換える](transactions_update.md)                                                            |PATCH または PUT|/api/v1/transactions/:id             |`manage_transactions`|
 |[全ての入出金記録を得る](transactions_index.md)                                                                         |GET             |/api/v1/transactions                 |`transactions`       |
 |[要求の日を含む期間の、日曜始まりの週または月ごとの全ての入出金を得る](transaction_histories_index.md)                  |GET             |/api/v1/derived/transaction_histories|`transactions`       |
-|[要求の日を含み、日曜始まりの週または月を単位とする期間の、入出金の大分類毎の収支を得る](transaction_summaries_index.md)|GET             |/api/v1/derived/transaction_summaries|`transactions`       |
+|[要求の日を含み、日曜始まりの週または月を単位とする期間の、入出金の大分類または中分類毎の収支を得る](transaction_summaries_index.md)|GET             |/api/v1/derived/transaction_summaries|`transactions`       |
 
 ### 資産情報の取得
 
