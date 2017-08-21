@@ -86,7 +86,7 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 |-----------------------------------------------------------------------------------------------------------------------|--------|--------------------------|--------------------|
 |[金融機関の全ての分類を得る](service_categories_index.md)                                                              |GET     |/api/v1/service_categories|なし                |
 |[マネーフォワードで口座を登録可能な全ての金融機関を得る](services_index.md)                                            |GET     |/api/v1/services          |なし                |
-|[マネーフォワードで登録可能な特定の金融機関のログインに必要な全ての入力項目を得る](services_show.md)                   |GET     |/api/v1/services/:id      |なし                |
+|[マネーフォワードで登録可能な特定の金融機関のログインに必要な入力項目を得る](services_show.md)                   |GET     |/api/v1/services/:id      |なし                |
 |[マネーフォワードが金融機関から情報を取得しようとする際に生じうる全てのエラーの種類を得る](aggregation_errors_index.md)|GET     |/api/v1/aggregation_errors|なし                |
 
 ### 口座情報の取得・編集
@@ -96,8 +96,8 @@ API の使用時には、始めに認可を得、アクセストークンを得�
 |[口座を登録する](accounts_create.md)                                                               |POST            |/api/v1/accounts               |`manage_accounts`   |
 |[特定の口座を解除する](accounts_destroy.md)                                                        |DELETE          | /api/v1/accounts/:id          |`manage_accounts`   |
 |[特定の口座の登録内容を書き換える](accounts_update.md)                                             |PATCH または PUT|/api/v1/accounts/:id           |`manage_accounts`   |
-|[特定の口座への代替のログイン方法で必要な追加の質問の質問部分を得る](additional_requests_create.md)|POST            |/api/v1/additional_requests    |`manage_accounts`   |
-|[特定の口座への代替のログイン方法で必要な追加の質問の答えを更新する](additional_requests_update.md)|PATCH または PUT|/api/v1/additional_requests/:id|`manage_accounts`   |
+|[特定の口座のログインに必要な追加の入力項目を登録する](additional_requests_create.md)|POST            |/api/v1/additional_requests    |`manage_accounts`   |
+|[特定の口座のログインに必要な追加の入力項目の答えを編集する](additional_requests_update.md)|PATCH または PUT|/api/v1/additional_requests/:id|`manage_accounts`   |
 |[全ての口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire_all.md)            |POST            |/api/v1/accounts/acquire       |`acquire_accounts`  |
 |[特定の口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire.md)                |POST            |/api/v1/accounts/:id/acquire   |`acquire_accounts`  |
 |[全ての口座の取得状況や資産額合計を得る](accounts_index.md)                                        |GET             |/api/v1/accounts               |`accounts`          |
