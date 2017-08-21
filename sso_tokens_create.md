@@ -10,10 +10,10 @@ POST https://moneyforward.com/api/v1/sso_tokens
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| 本文 | 任意; デフォルト: `/` | `sso_tokens[redirect_path]` | リダイレクト先URI |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+本文 | 任意; デフォルト: `/` | `sso_tokens[redirect_path]` | リダイレクト先URI
 
 ### 例
 

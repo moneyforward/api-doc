@@ -16,17 +16,17 @@ PUT https://moneyforward.com/api/v1/transactions/:id
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| パス | 必須 | `id` | [入出金項目](transactions_index.md)の `hashed_id` |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
-| 本文 | 必須 | `account_id` | [入金元または出金先の財布口座](accounts_index.md)の `hashed_id`; 財布口座の場合には、口座とサブアカウントが1対1対応している; 自動連携している口座は指定出来ない |
-| 本文 | 必須 | `is_income` | `1`: 収入, `true`: 収入, `0`: 支出, `false`: 支出 |
-| 本文 | 必須 | `amount` | 金額; 入出金に関わらず0または正の整数 |
-| 本文 | 任意; デフォルト: 要求の日 | `updated_at` | 入出金日; `YY/MM/DD` 形式 |
-| 本文 | 任意; デフォルト: 空文字列 | `content` | 入出金内容を記す文字列; 最大65,535byte |
-| 本文 | 任意; デフォルト: `0` (未設定) | `large_category_id` | [入出金の大分類](transaction_categories_index.md)の `id` |
-| 本文 | 任意; デフォルト: `0` (未設定) | `middle_category_id` |[入出金の中分類](transaction_categories_index.md)の `id` |
+場所 | 随意性 | 名称 | 内容
+---- | ---- | ---- | ---
+パス | 必須 | `id` | [入出金項目](transactions_index.md)の `hashed_id`
+ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値
+本文 | 必須 | `account_id` | [入金元または出金先の財布口座](accounts_index.md)の `hashed_id`; 財布口座の場合には、口座とサブアカウントが1対1対応している; 自動連携している口座は指定出来ない
+本文 | 必須 | `is_income` | `1`: 収入, `true`: 収入, `0`: 支出, `false`: 支出
+本文 | 必須 | `amount` | 金額; 入出金に関わらず0または正の整数
+本文 | 任意; デフォルト: 要求の日 | `updated_at` | 入出金日; `YY/MM/DD` 形式
+本文 | 任意; デフォルト: 空文字列 | `content` | 入出金内容を記す文字列; 最大65,535byte
+本文 | 任意; デフォルト: `0` (未設定) | `large_category_id` | [入出金の大分類](transaction_categories_index.md)の `id`
+本文 | 任意; デフォルト: `0` (未設定) | `middle_category_id` |[入出金の中分類](transaction_categories_index.md)の `id`
 
 ### 例
 
