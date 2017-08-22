@@ -123,7 +123,6 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[全ての資産を得る](user_assets_index.md)                                             |GET     |/api/v1/user_assets               |`assets`            |
 |[特定の資産を得る](user_assets_show.md)                                              |GET     |/api/v1/user_assets/:id           |`assets`            |
 |[全ての資産の履歴を得る](user_asset_histories_index.md)                              |GET     |/api/v1/user_asset_histories      |`assets`            |
-|[特定の資産の履歴を得る](user_asset_histories_show.md)                               |GET     |/api/v1/user_asset_histories/:id  |`assets`            |
 |[全ての大分類ごとの資産の合計を得る](user_asset_classes_index.md)                    |GET     |/api/v1/user_asset_classes        |`assets`            |
 |[全ての大分類ごとの資産の合計の履歴を得る](user_asset_class_histories_index.md)      |GET     |/api/v1/user_asset_class_histories|`assets`            |
 |[中分類や通貨の全ての組み合わせごとの資産の合計を得る](user_asset_summaries_index.md)|GET     |/api/v1/user_asset_summaries      |`assets`            |

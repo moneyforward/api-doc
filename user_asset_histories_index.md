@@ -38,7 +38,22 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ### パラメーター
 
-[GET https://moneyforward.com/api/v1/user_asset_histories/:id](user_asset_histories_show.md) の内容から一部を欠いたものが `user_asset_histories[i]` として配列に入っている。
+| 名称 | 内容 |
+| ---- | --- |
+| `user_asset_history[code]` | 株式銘柄コード等 |
+| `user_asset_history[cost]` | 現在未使用 |
+| `user_asset_history[entried_at]` | 取得日; ISO 8601 拡張形式; 特定できなければ `null` |
+| `user_asset_history[entried_price]` | 取得価格 |
+| `user_asset_history[expire_at]` | ポイント等の場合の有効期限日; ISO 8601 拡張形式; 特定できなければ `null` |
+| `user_asset_history[jpy_rate]` | 円換算レート |
+| `user_asset_history[name]` | 名称 |
+| `user_asset_history[profit]` | 損益 |
+| `user_asset_history[qty]` | 数量 |
+| `user_asset_history[value]` | 評価額またはポイント数 |
+| `user_asset_history[rated_value]` | 円換算評価額 |
+| `user_asset_history[rated_profit]` | 円換算損益 |
+| `user_asset_history[updated_at]` | 基準日; ISO 8601 拡張形式 |
+| `user_asset_history[hashed_original_user_asset_id]` | 履歴作成の元となった資産の `hashed_id` |
 
 ### 例
 
