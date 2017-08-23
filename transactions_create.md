@@ -27,17 +27,15 @@ POST https://moneyforward.com/api/v1/transactions
 POST https://moneyforward.com/api/v1/transactions
 X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf09e5e6a0c"
 
-{"transaction": {
-  "hashed_account_id": "c6f7fTZ_BfttQZ2fBg2eTQ",
-  "hashed_sub_account_id": "c6f7fTZ_BfttQZ2fBg2eTQ",
-  "amount": 1234,
-  "content": "labour",
+{
+  "account_id": "c6f7fTZ_BfttQZ2fBg2eTQ",
   "is_income": true,
-  "is_transfer": false,
-  "large_category_id": 0,
-  "middle_category_id": 0,
-  "updated_at": "2017-01-31T00:00:00+09:00"
-}}
+  "amount": 1234,
+  "updated_at": "2017/01/31",
+  "content": "labour",
+  "large_category_id": 4,
+  "middle_category_id": 11
+}
 ```
 
 ## 応答の本文
