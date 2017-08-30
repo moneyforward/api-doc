@@ -16,7 +16,7 @@ PUT https://moneyforward.com/api/v1/additional_requests/:id
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
 | パス | 必須 | `id` | [追加の質問](additional_requests_create.md)の `hashed_id` |
 | 本文 | 必須 | `additional_request[response_data]` | 追加の質問の答え |
 
