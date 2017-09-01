@@ -16,7 +16,7 @@ POST https://moneyforward.com/api/v1/accounts/:id/acquire
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
 | パス | 必須 | `id` | [口座](accounts_index.md)の `hashed_id` |
 
 ### 例

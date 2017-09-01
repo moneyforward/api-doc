@@ -16,7 +16,7 @@ GET https://moneyforward.com/api/v1/accounts
 
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで `アクセストークン` は [`access_token`](token.md) の値 |
+| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の種別](service_categories_index.md)の `id` |
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数; 最大: `10000` |
