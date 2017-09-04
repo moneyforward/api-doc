@@ -34,7 +34,7 @@
 * 例: 
 
     ```
-    https://moneyforward.com/api/v1/user_asset_summaries?account_ids[]=LlPqfqeeCZavwPBLmUy6xg==&account_ids[]=dyJaw7FlOG41c1C-LKndFA&asset_subclass_ids[]=39&page=2
+    https://moneyforward.com/api/v1/accounts?service_category_ids[]=1&service_category_ids[]=2&page=1
     ```
 
 ## 応答
@@ -125,5 +125,3 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[全ての資産の履歴を得る](user_asset_histories_index.md)                              |GET     |/api/v1/user_asset_histories      |`assets`            |
 |[全ての大分類ごとの資産の合計を得る](user_asset_classes_index.md)                    |GET     |/api/v1/user_asset_classes        |`assets`            |
 |[全ての大分類ごとの資産の合計の履歴を得る](user_asset_class_histories_index.md)      |GET     |/api/v1/user_asset_class_histories|`assets`            |
-|[中分類や通貨の全ての組み合わせごとの資産の合計を得る](user_asset_summaries_index.md)|GET     |/api/v1/user_asset_summaries      |`assets`            |
-|[中分類や通貨の特定の組み合わせの資産の合計を得る](user_asset_summaries_show.md)     |GET     |/api/v1/user_asset_summaries/:id  |`assets`            |
