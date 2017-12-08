@@ -17,6 +17,7 @@ GET https://moneyforward.com/api/v1/transactions
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
+| クエリー | 任意; デフォルト: 全て | `is_target` | `1`: 計算対象, `0`: 計算対象外 |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](accounts_index.md)の `hashed_id` |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `large_category_ids[]` | [入出金の大分類](transaction_categories_index.md)の `id` |
@@ -41,6 +42,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | ---- | --- |
 | `transactions[i][transaction][hashed_id]` | 入出金記録の `hashed_id` |
 | `transactions[i][transaction][content]` | ユーザーが書き込める入出金の内容を表す文字列 |
+| `transactions[i][transaction][is_target]` | `true`: 計算対象, `false`: 計算対象外 |
 | `transactions[i][transaction][is_income]` | `true`: 収入, `false`: 支出 |
 | `transactions[i][transaction][is_transfer]` | `true`: 振替, `false`: 振替でない |
 | `transactions[i][transaction][currency]` | 通貨; デフォルト: `JPY` (日本円) |
@@ -68,6 +70,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
         "content": "地方税",
         "created_at": "2014-08-11T16:20:59+09:00",
         "currency": "JPY",
+        "is_target": true,
         "is_income": false,
         "is_transfer": false,
         "jpyrate": 1,
