@@ -44,7 +44,7 @@ POST http://moneyforward.com/oauth/v2/token?client_id=ff97d597c2a98367461892a497
 | ---- | --- |
 | `iss` | Issuer; アクセストークンの発行元を表す文字列やURL; `https://moneyforward.com` |
 | `sub` | Subject; ユーザーに固有な文字列 |
-| `aud` | Audience; 要求の `cliend_id` の値 |
+| `aud` | Audience; 要求の `client_id` の値 |
 | `exp` | Expiration time; `id_token` の有効期限 |
 | `iat` | Issued at; `id_token` を発行した時間 |
 | `auth_time` | ユーザーを認証した時間 |
