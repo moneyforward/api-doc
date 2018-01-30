@@ -92,7 +92,7 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |---------------------------------------------------|---------------|-------------------|------------------------------|
 |[ユーザーの認証情報や電子メールを得る](userinfo.md)            |GET または POST|/oauth/userinfo    |`openid` または `openid email`|
 |[ユーザーの登録状況を得る](user_show.md)               |GET            |/api/v1/user       |なし                          |
-|[ユーザーのSSOトークンを登録する](sso_tokens_create.md)|POST           |/api/v1/sso_tokens|`sso_tokens`                  |
+|[ユーザーのSSOトークンを登録する](sso_tokens_create.md)|POST           |/api/v1/sso_tokens|`manage_sso`                  |
 |[ユーザーのデモグラフィック情報を閲覧する](profile_show.md)|GET           |/api/v1/profile|`profile`                  |
 |ユーザーの登録を削除する                           |DELETE         |/api/v1/user       |非公開                        |
 
