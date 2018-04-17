@@ -63,7 +63,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
     "disp_name": null,
     "aggregation_error_id": 7,
     "last_aggregated_at": "2014-05-31T17:16:05+09:00",
-    "last_succeeded_at": "未取得",
+    "last_succeeded_at": "",
     "memo": null,
     "message": null,
     "msg_flag": 1,
