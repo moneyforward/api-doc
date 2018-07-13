@@ -56,6 +56,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
        "account": {
          "account_uid_hidden": "dem*",
          "asset_sum": 4839122.2979287775,
+         "asset_sum_debt": -839122.2979287775,
+         "account_show_path": "/accounts/show/JmaKaQJ1wfqKUE68hX9cHw",
          "created_at": "2014-04-19T17:33:37+09:00",
          "disp_name": null,
          "aggregation_error_id": 5,
