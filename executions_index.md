@@ -68,7 +68,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
         "trade_kind": "SPOT",
         "symbol": "BTC_JPY",
         "side": "SELL",
-        "created_at": "2018-04-02T10:23:01+09:00",
+        "entried_at": "2018-04-02T10:23:01+09:00",
         "price": 752919,
         "qty": 0.001,
         "cost": 0,
