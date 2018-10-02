@@ -38,7 +38,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ```
 {
-  "sso_token" {
+  "sso_token": {
     "token": "トークン文字列"
   }
 }
