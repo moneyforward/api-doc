@@ -73,14 +73,14 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
     "service_id": 7,
     "status": 2,
     "hashed_id": "84dG3OLcZt_gLm66DESKzw==",
-    "sub_accounts" : [
+    "sub_accounts": [
       {
-        "sub_name" : null,
-        "sub_number" : null
+        "sub_name": null,
+        "sub_number": null
       },
       {
-        "sub_name" : "本店",
-        "sub_number" : "0999999",
+        "sub_name": "本店",
+        "sub_number": "0999999"
       }
     ],
     "service": {
