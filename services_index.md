@@ -21,6 +21,7 @@ GET https://moneyforward.com/api/v1/services
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](service_categories_index.md)の `id` |
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `200` | `limit` | 1ページ当たりの最大表示件数; 最大: `2000` |
+| クエリー | 任意; デフォルト: なし　|　`biz_flag` | 個人用口座・法人用口座に絞って検索する。`0`なら個人用口座、`1`なら法人用口座。|
 
 ### 例
 
