@@ -21,6 +21,7 @@ GET https://moneyforward.com/api/v1/services
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `service_category_ids[]` | [金融機関の分類](service_categories_index.md)の `id` |
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `200` | `limit` | 1ページ当たりの最大表示件数; 最大: `2000` |
+| クエリー | 任意; デフォルト: なし　|　`biz_flag` | 個人用口座・法人用口座に絞って検索する。`0`なら個人用口座、`1`なら法人用口座。|
 
 ### 例
 
@@ -39,52 +40,55 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 ```
 {
-  "limit": 3,
-  "offset": 0,
-  "total_count": 4,
-  "services": [
-    {
-      "service": {
-        "category_name": "銀行",
-        "category_type": "BANK",
-        "code": "2820",
-        "description": "<li>口座番号ではなくオンラインバンキング用のログイン情報となります。オンラインバンキングの手続きは各金融機関へお問い合わせ下さい。</li><li>登録後、「合言葉の入力が必要です」というメッセージが表示された場合、本サイトへのログインに用いる答えの入力をお願いします。</li><li>登録後、「IDとパスワードをお確かめ下さい」というメッセージが表示された場合、一度本サイトにログイン出来るかのご確認をお願いします。</li>",
-        "id": 1045,
-        "login_url": "https://www2.paweb.anser.or.jp/BS?CCT0080=2820",
-        "service_category_id": 2,
-        "service_name": "長崎三菱信用組合",
-        "service_type": "B_SHINKUMI_2820",
-        "yomigana": "ナガサキミツビシシンヨウクミアイ"
-      }
-    },
-    {
-      "service": {
-        "category_name": "銀行",
-        "category_type": "BANK",
-        "code": "0005",
-        "description": "<li>口座番号ではなくオンラインバンキング用のログイン情報となります。オンラインバンキングの手続きは各金融機関へお問い合わせ下さい。</li><li>登録後、「IDとパスワードをお確かめ下さい」というメッセージが表示された場合、一度本サイトにログイン出来るかのご確認をお願いします。</li>",
-        "id": 1,
-        "login_url": "https://entry11.bk.mufg.jp/ibg/dfw/APLIN/loginib/login?_TRANID=AA000_001",
-        "service_category_id": 2,
-        "service_name": "三菱東京UFJ銀行",
-        "service_type": "B_MUFG",
-        "yomigana": "ミツビシトウキョウユーエフジェイギンコウ"
-      }
-    },
-    {
-      "service": {
-        "category_name": "銀行",
-        "category_type": "BANK",
-        "code": "0288",
-        "description": "<li>口座番号ではなくオンラインバンキング用のログイン情報となります。オンラインバンキングの手続きは各金融機関へお問い合わせ下さい。</li><li>登録後、「IDとパスワードをお確かめ下さい」というメッセージが表示された場合、一度本サイトにログイン出来るかのご確認をお願いします。</li>",
-        "id": 1482,
-        "login_url": "https://www.direct.tr.mufg.jp",
-        "service_category_id": 2,
-        "service_name": "三菱UFJ信託銀行",
-        "service_type": "B_TR_MUFG",
-        "yomigana": "ミツビシユーエフジェイシンタクギンコウ"
-      }
-    }
-  ]
+    "limit": 3,
+    "offset": 0,
+    "total_count": 1562,
+    "services": [
+        {
+            "service": {
+                "id": 1144,
+                "service_category_id": 2,
+                "category_type": "BANK",
+                "service_type": "B_SHINKIN_1206",
+                "category_name": "銀行",
+                "service_name": "アイオー信用金庫",
+                "is_biz": false,
+                "login_url": "https://www11.ib.shinkin-ib.jp/webbk/login/b-prelogin.do?bankcode=MTIwNg==",
+                "yomigana": "アイオーシンヨウキンコ",
+                "description": "<li>口座番号ではなくオンラインバンキング用のログイン情報となります。オンラインバンキングの手続きは各金融機関へお問い合わせ下さい。</li><li>登録後、「IDとパスワードをお確かめ下さい」というメッセージが表示された場合、一度金融機関サイトにログイン出来るかのご確認をお願いします。</li>",
+                "code": "1206"
+            }
+        },
+        {
+            "service": {
+                "id": 157,
+                "service_category_id": 2,
+                "category_type": "BANK",
+                "service_type": "B_AICHI",
+                "category_name": "銀行",
+                "service_name": "愛知銀行",
+                "is_biz": false,
+                "login_url": "https://www.aidirect.aichibank.co.jp/ib/index.do?PT=BS&CCT0080=0542",
+                "yomigana": "アイチギンコウ",
+                "description": null,
+                "code": "0542"
+            }
+        },
+        {
+            "service": {
+                "id": 1027,
+                "service_category_id": 2,
+                "category_type": "BANK",
+                "service_type": "B_SHINKUMI_2451",
+                "category_name": "銀行",
+                "service_name": "愛知県中央信用組合",
+                "is_biz": false,
+                "login_url": "https://www.parasol.anser.ne.jp/ib/index.do?PT=BS&CCT0080=2451",
+                "yomigana": "アイチケンチュウオウシンヨウクミアイ",
+                "description": "<li>口座番号ではなくオンラインバンキング用のログイン情報となります。オンラインバンキングの手続きは各金融機関へお問い合わせ下さい。</li><li>登録後、「合言葉の入力が必要です」というメッセージが表示された場合、金融機関サイトへのログインに用いる答えの入力をお願いします。</li><li>登録後、「IDとパスワードをお確かめ下さい」というメッセージが表示された場合、一度金融機関サイトにログイン出来るかのご確認をお願いします。</li>",
+                "code": "2451"
+            }
+        }
+    ]
 }
 ```
