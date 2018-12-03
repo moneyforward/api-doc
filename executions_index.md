@@ -4,7 +4,7 @@
 
 ### 必要な権限
 
-`trades_inquiry`
+`trades_inquiry` または `crypto_ccy_trades_inquiry`
 
 ### エンドポイント
 
@@ -32,6 +32,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 ```
 
 ## 応答の本文
+
+`trades_inquiry` 権限による要求には全ての約定の履歴を返し、 `crypto_ccy_trades_inquiry` の場合には全ての仮想通貨の約定の履歴を返す。
 
 ### パラメーター
 
