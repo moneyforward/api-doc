@@ -100,7 +100,7 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[特定の口座のログインに必要な追加の入力項目の答えを編集する](additional_requests_update.md)|PATCH または PUT|/api/v1/additional_requests/:id|`manage_accounts`   |
 |[全ての口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire_all.md)            |POST            |/api/v1/accounts/acquire       |`acquire_accounts`  |
 |[特定の口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire.md)                |POST            |/api/v1/accounts/:id/acquire   |`acquire_accounts`  |
-|[全ての口座の取得状況や資産額合計を得る](accounts_index.md)                                        |GET             |/api/v1/accounts               |`accounts`          |
+|[全ての口座の取得状況や資産額合計を得る](accounts_index.md)                                        |GET             |/api/v1/accounts               |`accounts` または `manual_accounts` |
 |[特定の口座の取得状況や資産額合計、ログインに必要な入力項目を得る](accounts_show.md)               |GET             |/api/v1/accounts/:id           |`accounts`          |
 
 ### 入出金情報の取得・編集

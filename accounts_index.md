@@ -4,7 +4,7 @@
 
 ### 必要な権限
 
-`accounts`
+`accounts` または `manual_accounts`
 
 ### エンドポイント
 
@@ -29,6 +29,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 ```
 
 ## 応答の本文
+
+`accounts` 権限による要求には全ての口座の取得状況や資産額合計を返し、 `manual_accounts` の場合には全ての手入力口座の取得状況や資産額合計を返す。
 
 ### パラメーター
 
