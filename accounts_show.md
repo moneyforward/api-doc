@@ -126,13 +126,6 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
         "service_id": 7,
         "unique_flag": 0
       }
-    ],
-    "additional_requests": [
-      {
-        "hashed_id": "DMA8-glWM3Bgzmvkx0dJkQ==",
-        "message": "合言葉／秘密の質問 への記入が必要です。",
-        "request_data": "子供の頃の一番の親友の名前は何ですか"
-      }
     ]
   }
 }
