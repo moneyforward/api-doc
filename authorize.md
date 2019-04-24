@@ -42,7 +42,9 @@ POST https://moneyforward.com/oauth/authorize
 GET https://moneyforward.com/oauth/authorize?response_type=code&client_id=710c7d597a85ebb461802267bebb83ff58cabd62f2ff9&redirect_uri=http%3A%2F%2Flocalhost%3A1234%2Fcallback&state=NzHDXGuMme5c4GkCEd7TXUYebK0%3D&scope=openid+email+accounts+acquire_accounts+manage_accounts+assets+transactions+manage_transactions+manage_sso
 ```
 
-## 応答の本文
+## リダイレクト
+
+要求をすると認可画面にリダイレクトされ、ユーザーがその画面上の説明に同意して「許可する」ボタンを押すと、次に`redirect_url`にリダイレクトされる。そのURLのクエリーに以下のパラメータ値が与えられる。
 
 ### パラメーター
 
@@ -54,8 +56,5 @@ GET https://moneyforward.com/oauth/authorize?response_type=code&client_id=710c7d
 ### 例
 
 ```
-{
-  "code": e885b973e64797bcf3342529d57cd2adca97a11f787ef9736ea92d8061e5aa59,
-  "state": NzHDXGuMme5c4GkCEd7TXUYebK0
-}
+http://localhost:1234/callback?code=e885b973e64797bcf3342529d57cd2adca97a11f787ef9736ea92d8061e5aa59&state=NzHDXGuMme5c4GkCEd7TXUYebK0
 ```
