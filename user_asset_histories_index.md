@@ -34,25 +34,50 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 ```
 
 ## 応答の本文
-
 ### パラメーター
 
 | 名称 | 内容 |
 | ---- | --- |
-| `user_asset_history[code]` | 株式銘柄コード等 |
-| `user_asset_history[cost]` | 現在未使用 |
-| `user_asset_history[entried_at]` | 取得日; ISO 8601 拡張形式; 特定できなければ `null` |
-| `user_asset_history[entried_price]` | 取得価格 |
-| `user_asset_history[expire_at]` | ポイント等の場合の有効期限日; ISO 8601 拡張形式; 特定できなければ `null` |
-| `user_asset_history[jpy_rate]` | 円換算レート |
-| `user_asset_history[name]` | 名称 |
-| `user_asset_history[profit]` | 損益 |
-| `user_asset_history[qty]` | 数量 |
-| `user_asset_history[value]` | 評価額またはポイント数 |
-| `user_asset_history[rated_value]` | 円換算評価額 |
-| `user_asset_history[rated_profit]` | 円換算損益 |
-| `user_asset_history[updated_at]` | 基準日; ISO 8601 拡張形式 |
-| `user_asset_history[hashed_original_user_asset_id]` | 履歴作成の元となった資産の `hashed_id` |
+| `total_count`                                                                  | 全レコード数                                                                       |
+| `user_asset_histories[i][user_asset_history][asset_class_id]`                  | 資産の大分類のid                                                                   |
+| `user_asset_histories[i][user_asset_history][asset_subclass_id]`               | 資産の大分類中の中分類のid                                                         |
+| `user_asset_histories[i][user_asset_history][code]`                            | 株式銘柄コード等                                                                   |
+| `user_asset_histories[i][user_asset_history][cost]`                            | 現在未使用                                                                         |
+| `user_asset_histories[i][user_asset_history][currency]`                        | 通貨; デフォルト: `JPY` (日本円)                                                   |
+| `user_asset_histories[i][user_asset_history][current_price]`                   | データが取得された時点での、10000口当たりの単価                                    |
+| `user_asset_histories[i][user_asset_history][entried_at]`                      | 取得日; ISO 8601 拡張形式; 特定できなければ `null`                                   |
+| `user_asset_histories[i][user_asset_history][entried_price]`                   | 取得価格                                                                           |
+| `user_asset_histories[i][user_asset_history][expire_at]`                       | ポイント等の場合の有効期限日; ISO 8601 拡張形式; 特定できなければ `null`             |
+| `user_asset_histories[i][user_asset_history][jpyrate]`                         | 円換算レート                                                                       |
+| `user_asset_histories[i][user_asset_history][name]`                            | 名称                                                                               |
+| `user_asset_histories[i][user_asset_history][profit]`                          | 損益                                                                               |
+| `user_asset_histories[i][user_asset_history][qty]`                             | 数量                                                                               |
+| `user_asset_histories[i][user_asset_history][updated_at]`                      | 基準日; ISO 8601 拡張形式                                                          |
+| `user_asset_histories[i][user_asset_history][value]`                           | 評価額またはポイント数                                                             |
+| `user_asset_histories[i][user_asset_history][hashed_id]`                       | ユニーク`id`                                                                         |
+| `user_asset_histories[i][user_asset_history][hashed_account_id]`               | 入出金元の口座の `hashed_id`                                                         |
+| `user_asset_histories[i][user_asset_history][hashed_original_user_asset_id]`   | 履歴作成の元となった資産の `hashed_id`                                               |
+| `user_asset_histories[i][user_asset_history][account][account_uid_hidden]`     | 口座のidの一部を隠したもの (最大3文字が表示される)                                 |
+| `user_asset_histories[i][user_asset_history][account][created_at]`             | 口座が登録された日付                                                              |
+| `user_asset_histories[i][user_asset_history][account][disp_name]`              | ユーザーが設定した口座の識別名 (未設定なら `null`)                                   |
+| `user_asset_histories[i][user_asset_history][account][last_aggregated_at]`     | 該当accountのサービスが、MoneyForwardと最後にデータ連携を実施した日時              |
+| `user_asset_histories[i][user_asset_history][account][last_succeeded_at]`      | 該当accountのサービスが、MoneyForwardと最後にデータ連携処理が成功した日時          |
+| `user_asset_histories[i][user_asset_history][account][memo]`                   | ユーザーが設定したメモ                                                             |
+| `user_asset_histories[i][user_asset_history][account][message]`                | 金融機関からユーザーへの通知                                                       |
+| `user_asset_histories[i][user_asset_history][account][msg_flag]`               | `true`: message を表示する, `false` (デフォルト): message を表示しない                 |
+| `user_asset_histories[i][user_asset_history][account][next_aggregate_at]`      | 該当accountのさびーすが、MoneyForwardとデータ連携する次回の予定日                  |
+| `user_asset_histories[i][user_asset_history][account][service_category_id]`    | 金融機関分類のid                                                                   |
+| `user_asset_histories[i][user_asset_history][account][service_id]`             | 金融機関の`id`                                                                      |
+| `user_asset_histories[i][user_asset_history][account][status]`                 | 金融機関からの情報の取得状況; 0: 取得済み, 1: 取得中、2: 取得エラー, 3: 取得停止中 |
+| `user_asset_histories[i][user_asset_history][account][service][category_name]` | 金融機関の分類                                                                     |
+| `user_asset_histories[i][user_asset_history][account][service][category_type]` | 金融機関の分類を表す固有の記号                                                     |
+| `user_asset_histories[i][user_asset_history][account][service][code]`          | 金融機関コード                                                                     |
+| `user_asset_histories[i][user_asset_history][account][service][description]`   | 金融機関へのログインについての説明                                                 |
+| `user_asset_histories[i][user_asset_history][account][service][id]`            | 金融機関の`id`                                                                      |
+| `user_asset_histories[i][user_asset_history][account][service][login_url]`     | 金融機関サイトへのログイン先                                                       |
+| `user_asset_histories[i][user_asset_history][account][service][service_name]`  | 金融機関の名前                                                                     |
+| `user_asset_histories[i][user_asset_history][account][service][service_type]`  | 金融機関固有の記号                                                                 |
+| `user_asset_histories[i][user_asset_history][account][service][yomigana]`      | 金融機関の名前の読み仮名                                                           |
 
 ### 例
 
