@@ -113,6 +113,7 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[全ての入出金記録を得る](transactions_index.md)                                                                         |GET             |/api/v1/transactions                 |`transactions`       |
 |[要求の日を含む期間の収支を、日曜始まりの週または月ごとに得る](transaction_histories_index.md)                  |GET             |/api/v1/derived/transaction_histories|`transactions`       |
 |[日曜始まりの週または月の収支を、資産の分類ごとに得る](transaction_summaries_index.md)|GET             |/api/v1/derived/transaction_summaries|`transactions`       |
+|[カード引き落とし明細一覧を取得する](card_future_payments.md)   |GET     |/api/v1/derived/card_future_payments|`transactions`       |
 
 ### 資産情報の取得
 
