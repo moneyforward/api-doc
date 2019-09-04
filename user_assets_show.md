@@ -33,8 +33,8 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 | 名称 | 内容 |
 | ---- | --- |
-| `user_asset[asset_class_id]` | [資産の大分類](https://github.com/moneyforward/api-doc/blob/master/asset_classes_index.md) |
-| `user_asset[asset_subclass_id]` | [資産の中分類](https://github.com/moneyforward/api-doc/blob/master/asset_subclasses_index.md) |
+| `user_asset[asset_class_id]` | [資産の大分類](https://github.com/moneyforward/api-doc/blob/master/asset_classes_index.md)のID |
+| `user_asset[asset_subclass_id]` | [資産の中分類](https://github.com/moneyforward/api-doc/blob/master/asset_subclasses_index.md)のID |
 | `user_asset[code]` | 株式銘柄コード等 |
 | `user_asset[cost]` | 現在未使用 |
 | `user_asset[currency]` | 通貨 |
@@ -59,8 +59,27 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `user_asset[previous_value_set][rated_value]` | 前の営業日の円換算評価額 |
 | `user_asset[previous_value_set][rated_profit]` | 前の営業日の円換算損益 |
 | `user_asset[previous_value_set][updated_at]` | 前の営業日; ISO 8601 拡張形式 |
-| `user_asset[sub_accounts][sub_name]` | 支店名 |
-| `user_asset[sub_accounts][sub_number]` | 口座番号 |
+| `user_asset[account][account_uid_hidden]`        | 口座のidの一部を隠したもの (最大3文字が表示される)                                 |
+| `user_asset[account][created_at]`                | accountを登録した日時                                                                                   |
+| `user_asset[account][disp_name]`                 | ユーザーが設定した口座の識別名 (未設定なら null)                                   |
+| `user_asset[account][last_aggregated_at]`        | 該当accountのサービスが、MoneyForwardと最後にデータ連携を実施した日時              |
+| `user_asset[account][last_succeeded_at]`         | 該当accountのサービスが、MoneyForwardと最後にデータ連携処理が成功した日時          |
+| `user_asset[account][memo]`                      | ユーザーが設定したメモ                                                             |
+| `user_asset[account][message]`                   | 金融機関からユーザーへの通知                                                       |
+| `user_asset[account][msg_flag]`                  | `true`: message を表示する, false (デフォルト): message を表示しない                 |
+| `user_asset[account][msg_time]`                  | 現在は未使用
+| `user_asset[account][next_aggregate_at]`         | 該当accountのサービスが、MoneyForwardとデータ連携する次回の予定日                  |
+| `user_asset[account][service_category_id]`       | 金融機関分類のid                                                                   |
+| `user_asset[account][service_id]`                | 金融機関の`id`                                                                      |
+| `user_asset[account][status]`                    | 金融機関からの情報の取得状況; 0: 取得済み, 1: 取得中、2: 取得エラー, 3: 取得停止中 |
+| `user_asset[sub_account][created_at]`            | sub_accountを登録した日時                                                          |
+| `user_asset[sub_account][disp_name]`             | 手入力で作成した口座（財布内の所持金など）につけた名称                                   |
+| `user_asset[sub_account][service_category_id]`   | 金融機関分類のid                                                                   |
+| `user_asset[sub_account][sub_name]`              | 支店名                                                                             |
+| `user_asset[sub_account][sub_number]`            | 口座番号                                                                           |
+| `user_asset[sub_account][sub_type]`              | 口座の種別（普通、定期、カードなど）など弊社側のシステムで自動で割り当てられた値             |
+| `user_asset[asset_class]{..}` | [資産の大分類](https://github.com/moneyforward/api-doc/blob/master/asset_classes_index.md)のasset_class[i]と同様の内容を返す|
+| `user_asset[asset_subclass]{..}` | [資産の中分類](https://github.com/moneyforward/api-doc/blob/master/asset_subclasses_index.md)[i]と同様の内容を返す|
 
 ### 例
 
