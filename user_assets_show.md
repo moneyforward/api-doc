@@ -33,8 +33,12 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 
 | 名称 | 内容 |
 | ---- | --- |
+| `user_asset[asset_class_id]` | [資産の大分類](https://github.com/moneyforward/api-doc/blob/master/asset_classes_index.md) |
+| `user_asset[asset_subclass_id]` | [資産の中分類](https://github.com/moneyforward/api-doc/blob/master/asset_subclasses_index.md) |
 | `user_asset[code]` | 株式銘柄コード等 |
 | `user_asset[cost]` | 現在未使用 |
+| `user_asset[currency]` | 通貨 |
+| `user_asset[current_price]` | 基準価格(1口または1万口当たりの値段) |
 | `user_asset[entried_at]` | 資産取得日; ISO 8601 拡張形式; 特定できなければ `null` |
 | `user_asset[entried_price]` | 取得価格 |
 | `user_asset[expire_at]` | ポイント等の場合の有効期限日; ISO 8601 拡張形式; 特定できなければ `null` |
@@ -47,6 +51,9 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `user_asset[rated_profit]` | 円換算損益 |
 | `user_asset[created_at]` | レコード作成日; ISO 8601 拡張形式 |
 | `user_asset[updated_at]` | レコード更新日; ISO 8601 拡張形式 |
+| `user_asset[hashed_id]` | 資産のhash_id |
+| `user_asset[hashed_account_id]` | 口座のhash_id |
+| `user_asset[hashed_sub_account_id]` | サブアカウントのhash_id |
 | `user_asset[previous_value_set][value]` | 前の営業日の評価額 |
 | `user_asset[previous_value_set][profit]` | 前の営業日の損益 |
 | `user_asset[previous_value_set][rated_value]` | 前の営業日の円換算評価額 |
