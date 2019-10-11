@@ -50,7 +50,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `card_future_payments[i][hashed_partner_sub_account_id]` | 振替相手口座のサブアカウントのhashed_id |
 | `card_future_payments[i][account][service_id]` | 金融機関のid |
 | `card_future_payments[i][account][service_category_id]` | 金融機関分類のid |
-| `card_future_payments[i][account][status]` | 金融機関からの情報の取得状況; 0: 取得済み, 1: 取得中、2: 取得エラー, 3: 取得停止中 |
+| `card_future_payments[i][account][status]` | 金融機関からの情報の取得状況; 0: 正常, 1: 取得中、2: 取得エラー |
 | `card_future_payments[i][account][disp_name]` | 手入力で作成した口座（財布内の所持金など）につけた名称 |
 | `card_future_payments[i][account][memo]` | ユーザーが設定したメモ |
 | `card_future_payments[i][account][msg_flag]` | true: message を表示する, false (デフォルト): message を表示しない |

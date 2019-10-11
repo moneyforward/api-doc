@@ -71,7 +71,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `user_asset[account][next_aggregate_at]`         | 該当accountのサービスが、MoneyForwardとデータ連携する次回の予定日                  |
 | `user_asset[account][service_category_id]`       | 金融機関分類のid                                                                   |
 | `user_asset[account][service_id]`                | 金融機関の`id`                                                                      |
-| `user_asset[account][status]`                    | 金融機関からの情報の取得状況; 0: 取得済み, 1: 取得中、2: 取得エラー, 3: 取得停止中 |
+| `user_asset[account][status]`                    | 金融機関からの情報の取得状況; 0: 正常, 1: 取得中、2: 取得エラー |
 | `user_asset[account][service]{..}`                    |[金融機関情報詳細](https://github.com/moneyforward/api-doc/blob/master/services_show.md)|
 | `user_asset[sub_account][created_at]`            | sub_accountを登録した日時                                                          |
 | `user_asset[sub_account][disp_name]`             | 手入力で作成した口座（財布内の所持金など）につけた名称                                   |
