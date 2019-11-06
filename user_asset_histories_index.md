@@ -65,7 +65,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `user_asset_histories[i][user_asset_history][account][memo]`                   | ユーザーが設定したメモ                                                             |
 | `user_asset_histories[i][user_asset_history][account][message]`                | 金融機関からユーザーへの通知                                                       |
 | `user_asset_histories[i][user_asset_history][account][msg_flag]`               | `true`: message を表示する, `false` (デフォルト): message を表示しない                 |
-| `user_asset_histories[i][user_asset_history][account][next_aggregate_at]`      | 該当accountのさびーすが、MoneyForwardとデータ連携する次回の予定日                  |
+| `user_asset_histories[i][user_asset_history][account][next_aggregate_at]`      | 該当accountのサービスが、MoneyForwardとデータ連携する次回の予定日                  |
 | `user_asset_histories[i][user_asset_history][account][service_category_id]`    | 金融機関分類のid                                                                   |
 | `user_asset_histories[i][user_asset_history][account][service_id]`             | 金融機関の`id`                                                                      |
 | `user_asset_histories[i][user_asset_history][account][status]`                 | 金融機関からの情報の取得状況; 0: 正常, 1: 取得中、2: 取得エラー |
