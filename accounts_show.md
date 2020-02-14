@@ -33,7 +33,6 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | 名称 | 内容 |
 | ---- | --- |
 | `account[account_uid_hidden]` | 口座のidの一部を隠したもの (最大3文字が表示される) |
-| `account[asset_sum]` | 資産の合計 |
 | `account[disp_name]` | ユーザーが設定した口座の識別名 (未設定なら `null`) |
 | `account[memo]` | ユーザーが設定したメモ |
 | `account[message]` | 金融機関からユーザーへの通知 |
