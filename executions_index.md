@@ -19,8 +19,8 @@ GET https://moneyforward.com/api/v1/executions
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | [口座](accounts_index.md)の `hashed_id` |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | [サブアカウント](accounts_index.md)の `hashed_id` |
-| クエリー | 任意; デフォルト: 要求の日の1か月前の日 | `from_date` | 最古の記帳日または日時; ISO 8601 拡張形式; 最大期間は1ヶ月間とする |
-| クエリー | 任意; デフォルト: 要求の日 | `to_date` | 最新の記帳日または日時; ISO 8601 拡張形式 |
+| クエリー | 任意; デフォルト: 要求の日の1か月前の日 | `from_date` | 最古の記帳日; ISO 8601 拡張形式; 最大期間は1ヶ月間とする |
+| クエリー | 任意; デフォルト: 要求の日 | `to_date` | 最新の記帳日; ISO 8601 拡張形式 |
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数; 最大: `500` |
 
