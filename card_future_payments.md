@@ -24,6 +24,8 @@ GET https://moneyforward.com/api/v1/card_future_payments
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数, 最大: `500` |
 
+※取得できる最大の期間は1年間、1年以上の期間を指定した場合、to_dateを基準にfrom_dateは1年前に設定される
+
 ### 例
 
 ```
