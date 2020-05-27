@@ -17,6 +17,7 @@ POST https://moneyforward.com/api/v1/accounts/acquire
 | 場所 | 随意性 | 名称 | 内容 |
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
+| パス | 任意 | `by_user` | `true`を設定するとユーザー操作によるアグリゲーション要求とみなす |
 
 ### 例
 
