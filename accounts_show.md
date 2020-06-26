@@ -39,7 +39,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
 | `account[msg_flag]` | `true`: `message` を表示する, `false` (デフォルト): `message` を表示しない |
 | `account[status]` | 金融機関からの情報の取得状況; `0`: 正常, `1`: 取得中、`2`: 取得エラー |
 | `account[aggregation_info][aggregation_status_sentence]`     | 口座のステータス状態の表示文言。`error_id == null`の場合：`"正常"` 、`error_id == null && message != null` の場合：`"正常（確認事項あり）"`、`error_id  != null`の場合：各[aggregation_error](https://github.com/moneyforward/api-doc/blob/master/aggregation_errors_index.md)の`"msg_title"`が設定される   | 
-|  `account[aggregation_info][aggregation_detail_sentence]`     | 口座のステータス詳細の表示文言。`message != null` の場合：`"message"`が設定される。`message == null` の場合、デフォルトメッセージとして`"金融機関と正常に連携できています"`もしくは各[aggregation_error](https://github.com/moneyforward/api-doc/blob/master/aggregation_errors_index.md)に対応したメッセージが設定される     | 
+|  `account[aggregation_info][aggregation_detail_sentence]`     | 口座のステータス詳細の表示文言。`message != null` の場合：`"message"`が設定される。`message == null` の場合、デフォルトメッセージとして`"金融機関と正常に連携できています"`もしくは各[aggregation_error](https://github.com/moneyforward/api-doc/blob/master/aggregation_errors_index.md)に対応した汎用メッセージが設定される     | 
 | `account[aggregation_info][last_aggregated_ago]` | 現在時刻から最後に金融機関から情報取得した日を減算し、UI表示用に加工した文言 | 
 | `account[aggregation_info][last_succeeded_ago]`  | 現在時刻から最後に金融機関から情報取得が成功した日を減算し、UI表示用に加工した文言 |  
 | `account[aggregation_info][is_error]`| `true` または `false`。直前の情報取得が失敗しているかどうかを示す。`aggregation_error_id`が設定されている場合に`true`が設定される |  
