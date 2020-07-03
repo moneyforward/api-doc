@@ -70,7 +70,6 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[ユーザーの登録状況を得る](user_show.md)               |GET            |/api/v1/user       |なし                          |
 |[ユーザーのSSOトークンを登録する](sso_tokens_create.md)|POST           |/api/v1/sso_tokens|`manage_sso`                  |
 |[ユーザーのデモグラフィック情報を閲覧する](profile_show.md)|GET           |/api/v1/profile|`profile`                  |
-|ユーザーの登録を削除する                           |DELETE         |/api/v1/user       |非公開                        |
 
 ### 金融機関情報の取得
 
@@ -106,6 +105,7 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[要求の日を含む期間の収支を、日曜始まりの週または月ごとに得る](transaction_histories_index.md)                  |GET             |/api/v1/derived/transaction_histories|`transactions`       |
 |[日曜始まりの週または月の収支を、資産の分類ごとに得る](transaction_summaries_index.md)|GET             |/api/v1/derived/transaction_summaries|`transactions`       |
 |[カード引き落とし明細一覧を取得する](card_future_payments.md)   |GET     |/api/v1/card_future_payments|`transactions`       |
+|[新着明細を取得する](transactions_recent.md)|GET |/api/v1/transactions/recent|`transactions`|
 
 ### 資産情報の取得
 
