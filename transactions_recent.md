@@ -46,7 +46,7 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
     "created_after": "2020-06-25",
     "limit": 100,
     "offset": 0,
-    "total_count": ,
+    "total_count" : 1,
     "transactions": [
         {
             "transaction": {
