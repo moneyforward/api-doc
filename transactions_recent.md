@@ -18,7 +18,7 @@ GET https://moneyforward.com/api/v1/transactions/recent
 | 場所 | 随意性 | 名称 | 内容 |
 | --- | --- | --- | --- |
 | ヘッダー | 必須 | Authorization または X-MFOAuthToken | Bearer `アクセストークン`;  |
-| クエリ | 任意; デフォルト: 要求日 | created_after | 取得対象開始日時 |
+| クエリ | 任意; デフォルト: 要求日 | `created_after` | 取得対象開始日時 |
 | クエリー | 任意; デフォルト: 全て | `is_target` | `1`: 計算対象, `0`: 計算対象外 |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `account_ids[]` | 口座の `hashed_id` |
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `sub_account_ids[]` | サブアカウントの `hashed_id` |
@@ -26,6 +26,8 @@ GET https://moneyforward.com/api/v1/transactions/recent
 | クエリー | 任意; デフォルト: 全て; 複数個使用可 | `middle_category_ids[]` | 入出金の中分類の `id` |
 | クエリー | 任意; デフォルト: `1` | `page` | ページ番号 |
 | クエリー | 任意; デフォルト: `100` | `limit` | 1ページ当たりの最大表示件数, 最大: `500` |
+
+※created_afterを指定できる期間の最大は1年間
 
 ### 例
 
