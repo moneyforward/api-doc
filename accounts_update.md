@@ -18,8 +18,8 @@ PUT https://moneyforward.com/api/v1/accounts/:id
 | ---- | ---- | ---- | --- |
 | ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
 | パス | 必須 | `id` | [口座](accounts_index.md)の `hashed_id` |
-| 本文 | 任意; デフォルト: なし | `account[service_form_answers][i][id]` | [金融機関のウェブサイト上でログインに必要な入力項目](services_show.md)の `id` |
-| 本文 | 任意; デフォルト: なし | `account[service_form_answers][i][value]` | 入力項目に入力されるべき値; 空だと更新しない |
+| 本文 | 任意; デフォルト: なし | `account[service_forms_answers][i][id]` | [金融機関のウェブサイト上でログインに必要な入力項目](services_show.md)の `id` |
+| 本文 | 任意; デフォルト: なし | `account[service_forms_answers][i][value]` | 入力項目に入力されるべき値; 空だと更新しない |
 
 ### 例
 
