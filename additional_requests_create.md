@@ -9,7 +9,7 @@
 ### エンドポイント
 
 ```
-POST https://moneyforward.com/api/v1/additonal_requests
+POST https://moneyforward.com/api/v1/additional_requests
 ```
 
 ### パラメーター
