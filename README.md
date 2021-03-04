@@ -89,8 +89,6 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[特定の口座の登録内容を書き換える](accounts_update.md)                                             |PATCH または PUT|/api/v1/accounts/:id           |`manage_accounts`   |
 |[特定の口座のログインに必要な追加の入力項目を登録する](additional_requests_create.md)|POST            |/api/v1/additional_requests    |`manage_accounts`   |
 |[特定の口座のログインに必要な追加の入力項目の答えを編集する](additional_requests_update.md)|PATCH または PUT|/api/v1/additional_requests/:id|`manage_accounts`   |
-|[口座の一時停止を行う](accounts_suspend.md)|PUT|/api/v1/accounts/:id/suspend|`manage_accounts`   |
-|[全ての口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire_all.md)            |POST            |/api/v1/accounts/acquire       |`acquire_accounts`  |
 |[特定の口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire.md)                |POST            |/api/v1/accounts/:id/acquire   |`acquire_accounts`  |
 |[全ての口座の取得状況や資産額合計を得る](accounts_index.md)                                        |GET             |/api/v1/accounts               |`accounts` または `manual_accounts` |
 |[特定の口座の取得状況や資産額合計、ログインに必要な入力項目を得る](accounts_show.md)               |GET             |/api/v1/accounts/:id           |`accounts`          |
@@ -106,7 +104,6 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 |[要求の日を含む期間の収支を、日曜始まりの週または月ごとに得る](transaction_histories_index.md)                  |GET             |/api/v1/derived/transaction_histories|`transactions`       |
 |[日曜始まりの週または月の収支を、資産の分類ごとに得る](transaction_summaries_index.md)|GET             |/api/v1/derived/transaction_summaries|`transactions`       |
 |[カード引き落とし明細一覧を取得する](card_future_payments.md)   |GET     |/api/v1/card_future_payments|`transactions`       |
-|[新着明細を取得する](transactions_recent.md)|GET |/api/v1/transactions/recent|`transactions`|
 
 ### 資産情報の取得
 
