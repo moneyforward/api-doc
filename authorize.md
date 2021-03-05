@@ -41,7 +41,7 @@ POST https://moneyforward.com/oauth/authorize
 ### 例
 
 ```
-GET https://moneyforward.com/oauth/authorize?response_type=code&client_id=710c7d597a85ebb461802267bebb83ff58cabd62f2ff9&redirect_uri=http%3A%2F%2Flocalhost%3A1234%2Fcallback&state=NzHDXGuMme5c4GkCEd7TXUYebK0%3D&scope=openid+email+accounts+acquire_accounts+manage_accounts+assets+transactions+manage_transactions+manage_sso
+GET https://moneyforward.comoauth/authorize?response_type=code&client_id=5e82f05f322845b8c96d5f8b0fbe19bd23ecadb69b700e9d011027b490de0b0b&redirect_uri=http%3A%2F%2Flocalhost%3A1234%2Fcallback&state=hoge&scope=openid%20email
 ```
 
 ## リダイレクト
