@@ -22,18 +22,20 @@ GET https://moneyforward.com/oauth/authorize
 
 ### パラメーター
 
-| 場所     | 随意性 | 名称            | 内容                                                                                                    |
-| -------- | ------ | --------------- | ------------------------------------------------------------------------------------------------------- |
-| クエリー | 必須   | `response_type` | `code`                                                                                                  |
-| クエリー | 必須   | `client_id`     | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェア固有の文字列  |
-| クエリー | 必須   | `redirect_uri`  | クライアントソフトウェアの登録時に指定された、クライアントソフトウェア上のアクセスポイント              |
-| クエリー | 任意   | `state`         | クライアントソフトウェアから提出される秘密の文字列                                                      |
-| クエリー | 必須   | `scope`         | このあと発行されるトークンを使ってアクセスする API エンドポイントに必要な全ての権限を空白でつないだもの |
+| 場所 | 随意性 | 名称 | 内容 |
+| ---- | ---- | ---- | --- |
+| クエリー | 必須 | `response_type` | `code` |
+| クエリー | 必須 | `client_id` | クライアントソフトウェア登録時にマネーフォワード担当者がお渡ししたクライアントソフトウェア固有の文字列 |
+| クエリー | 必須 | `redirect_uri` | クライアントソフトウェアの登録時に指定された、クライアントソフトウェア上のアクセスポイント |
+| クエリー | **必須** ※1 | `state` | リクエストとコールバックの間で状態を維持するために使用するランダムな値。マネーフォワードはリダイレクトによってクライアントに処理を戻す際にこの値を付与する。当パラメーターはCSRFを防ぐために用いる |
+| クエリー | 必須 | `scope` | このあと発行されるトークンを使ってアクセスするAPIエンドポイントに必要な全ての権限を空白でつないだもの |
 
+※1 stateパラメータははOAuth2.0標準規格の上では推奨ですが、CSRF対策として当社との認可フロー上においては必ず付与して下さい。
+　　
 ### 例
 
 ```
-GET https://moneyforward.com/oauth/authorize?response_type=code&client_id=710c7d597a85ebb461802267bebb83ff58cabd62f2ff9&redirect_uri=http%3A%2F%2Flocalhost%3A1234%2Fcallback&state=NzHDXGuMme5c4GkCEd7TXUYebK0%3D&scope=openid+email+accounts+acquire_accounts+manage_accounts+assets+transactions+manage_transactions+manage_sso
+GET https://moneyforward.comoauth/authorize?response_type=code&client_id=5e82f05f322845b8c96d5f8b0fbe19bd23ecadb69b700e9d011027b490de0b0b&redirect_uri=http%3A%2F%2Flocalhost%3A1234%2Fcallback&state=hoge&scope=openid%20email
 ```
 
 ## リダイレクト
