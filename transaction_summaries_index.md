@@ -14,12 +14,12 @@ GET https://moneyforward.com/api/v1/derived/transaction_summaries
 
 ### パラメーター
 
-| 場所 | 随意性 | 名称 | 内容 |
-| ---- | ---- | ---- | --- |
-| ヘッダー | 必須 | `Authorization` または `X-MFOAuthToken` | ```Bearer `アクセストークン` ```; ここで ``` `アクセストークン` ``` は [`access_token`](token.md) の値 |
-| クエリー | 任意; デフォルト: `month` | `period` | 期間の単位; `week`: 日曜始まりの週, `month`: 月 |
-| クエリー | 任意; デフォルト: `0` | `past` | 情報を得る期間がどれだけ過去か; 上記単位で計る; [`GET https://moneyforward.com/api/v1/derived/transaction_histories`](transaction_histories_index.md) の場合と意味が異なる |
-| クエリー | 任意; デフォルト: `large` | `category_size` | 集計する分類の大きさ; `large`: 大項目, `middle`: 中項目 |
+| 場所     | 随意性                    | 名称                                    | 内容                                                                                                                                                                       |
+| -------- | ------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ヘッダー | 必須                      | `Authorization` または `X-MFOAuthToken` | `` Bearer `アクセストークン`  ``; ここで `` `アクセストークン` `` は [`access_token`](token.md) の値                                                                       |
+| クエリー | 任意; デフォルト: `month` | `period`                                | 期間の単位; `week`: 日曜始まりの週, `month`: 月                                                                                                                            |
+| クエリー | 任意; デフォルト: `0`     | `past`                                  | 情報を得る期間がどれだけ過去か; 上記単位で計る; [`GET https://moneyforward.com/api/v1/derived/transaction_histories`](transaction_histories_index.md) の場合と意味が異なる |
+| クエリー | 任意; デフォルト: `large` | `category_size`                         | 集計する分類の大きさ; `large`: 大項目, `middle`: 中項目                                                                                                                    |
 
 ### 例
 
@@ -63,4 +63,3 @@ X-MFOAuthToken: "Bearer 0d171c8d5e6b023fa13ebd2209453f95e566ba4cb16a1bd1c3becdf0
   }
 }
 ```
-
