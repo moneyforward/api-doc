@@ -17,7 +17,7 @@
 
 ### 認証・認可方式
 
-OAuth2: Authorization Code Flow に基づく OpenID Connect
+OAuth2: Authorization Code Flow に基づく
 
 ## 要求
 
