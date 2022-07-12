@@ -84,11 +84,6 @@ API の使用には、それに先立って、ユーザーの認可を得、さ�
 
 |                                                                                             | メソッド         | URI                             | 必要な権限(スコープ)                |
 | ------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- | ----------------------------------- |
-| [口座を登録する](accounts_create.md)                                                        | POST             | /api/v1/accounts                | `manage_accounts`                   |
-| [特定の口座連携を解除する](accounts_destroy.md)                                             | DELETE           | /api/v1/accounts/:id            | `manage_accounts`                   |
-| [特定の口座の登録内容を書き換える](accounts_update.md)                                      | PATCH または PUT | /api/v1/accounts/:id            | `manage_accounts`                   |
-| [特定の口座のログインに必要な追加の入力項目を登録する](additional_requests_create.md)       | POST             | /api/v1/additional_requests     | `manage_accounts`                   |
-| [特定の口座のログインに必要な追加の入力項目の答えを編集する](additional_requests_update.md) | PATCH または PUT | /api/v1/additional_requests/:id | `manage_accounts`                   |
 | [特定の口座の情報をマネーフォワードに金融機関から再取得させる](accounts_acquire.md)         | POST             | /api/v1/accounts/:id/acquire    | `acquire_accounts`                  |
 | [全ての口座の取得状況や資産額合計を得る](accounts_index.md)                                 | GET              | /api/v1/accounts                | `accounts` または `manual_accounts` |
 | [特定の口座の取得状況や資産額合計、ログインに必要な入力項目を得る](accounts_show.md)        | GET              | /api/v1/accounts/:id            | `accounts`                          |
